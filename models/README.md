@@ -61,7 +61,7 @@ Foco: transformar causas diagnosticadas em ações estruturadas, avaliar seus im
 
 **Ordem estabelecida entre os candidatos 16 e 17:**
 
-```
+```text
 Diagnosis
     ↓
 Candidato 16 — sugerir, avaliar e priorizar ações
@@ -83,7 +83,7 @@ Foco: acompanhar continuamente o estado observado, detectar desvios relevantes e
 
 A arquitetura não é uma cadeia linear que termina em Monitoring. Monitoring funciona como mecanismo de retroalimentação:
 
-```
+```text
 Decision → Prediction → Monitoring
                  ↓
           desvio / alerta
@@ -106,12 +106,20 @@ A regra de handoff é explícita: **causa conhecida → Action; causa desconheci
 - reposição automatizada de estoques;
 - Control como possível trilha própria futura.
 
+### 6. Investigation — Investigação transversal
+
+Foco: estruturar investigações que não pertencem a uma das trilhas funcionais anteriores.
+
+- `models/investigation/` — modelos de investigação transversal.
+- `two-level-investigation.md` — Candidato 21: investigação em dois níveis, partindo de uma visão macro para um aprofundamento focalizado.
+
+A trilha foi criada para evitar que modelos de investigação transversal sejam artificialmente colocados em `models/analysis/`, que se mantém associado às etapas específicas da pipeline de previsão.
 
 ## Separação das trilhas
 
 A distinção entre as trilhas é deliberada:
 
-```
+```text
 Decision
    └── Como estruturar e apoiar decisões
 
@@ -123,6 +131,12 @@ Diagnosis
 
 Action
    └── Como transformar causas em ações e priorizá-las
+
+Monitoring
+   └── Como acompanhar estados, detectar desvios e retroalimentar o processo
+
+Investigation
+   └── Como estruturar investigações transversais que atravessam as demais trilhas
 ```
 
 Uma mesma aplicação pode atravessar mais de uma trilha. Isso não significa que os modelos devam ser fundidos; a integração deve ocorrer somente depois de validação e seleção.
@@ -142,6 +156,17 @@ Esse mecanismo **não está formalizado como candidato próprio neste momento**.
 **B. Taxonomia específica de categorias de evidência — ainda em observação**
 
 A classificação em atas, indicadores, processos internos, fatores externos, percepções, feedbacks etc. ainda não está formalizada como modelo próprio. É necessário observar se a estrutura reaparece em outros contextos antes de transformá-la em componente reutilizável.
+
+### Candidato 22 — escolha direcional do foco pelo usuário
+
+Permanece **em observação**.
+
+O mecanismo observado na Aula 4.1 é diferente dos mecanismos de human-in-the-loop associados aos Candidatos **10 e 15A**:
+
+- **Candidatos 10 e 15A:** a IA solicita **informação faltante ou necessária** para poder prosseguir;
+- **Candidato 22:** a IA solicita ao usuário uma **escolha direcional** sobre qual variável ou dimensão deseja investigar.
+
+Portanto, são sub-famílias diferentes de human-in-the-loop. **Não devem ser fundidos** quando forem eventualmente formalizados.
 
 ### Feedback da IA sobre a própria priorização
 
@@ -181,6 +206,11 @@ Este checkpoint registra o estado atual sem criar ou formalizar automaticamente 
 - A presença de diferentes tipos de informação é clara, mas ainda não há recorrência suficiente de uma taxonomia estável e independente de contexto.
 - **Status:** observação.
 
+**Candidato 22 — escolha direcional do foco pelo usuário**
+- A Aula 4.1 demonstra explicitamente a solicitação de uma variável escolhida pelo usuário e sua posterior análise.
+- O mecanismo é distinto dos Candidatos 10 e 15A: trata-se de escolha direcional, não de preenchimento de informação faltante.
+- **Status:** observação; manter como sub-família própria de human-in-the-loop e não fundir com 10/15A.
+
 **Reposição automatizada de estoques**
 - O material apresenta automação da reposição como aplicação de IA, mas ainda não foi demonstrado um mecanismo suficientemente geral e separado para justificar um modelo próprio.
 - **Status:** observação.
@@ -210,4 +240,3 @@ O laboratório prioriza:
 5. utilidade para outras aplicações.
 
 O fato de um mecanismo parecer promissor ou semelhante a um candidato existente não substitui esse processo.
-
