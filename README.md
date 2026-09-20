@@ -22,8 +22,11 @@ Nada aqui é considerado parte do ORCHESTRATOR CORE automaticamente. Um componen
 - Registrar hipóteses, experimentos e limitações.
 - Priorizar modelos reutilizáveis e independentes de contexto.
 - Manter a decisão humana como parte explícita dos modelos quando aplicável.
+- Distinguir trilhas funcionais de áreas transversais.
 
-## Estrutura inicial
+## Estrutura atual
+
+A estrutura abaixo reflete as pastas existentes no repositório. Em `models/`, seis áreas são tratadas como **trilhas funcionais** e quatro como **áreas transversais**.
 
 ```text
 ai-decision-intelligence-lab/
@@ -40,14 +43,15 @@ ai-decision-intelligence-lab/
 │       └── 06-decisao-na-ausencia-de-dados/
 │
 ├── models/
-│   ├── decision/
-│   ├── forecasting/
-│   ├── scenarios/
-│   ├── feedback/
-│   ├── recommendations/
-│   ├── uncertainty/
-│   ├── investigation/
-│   ├── classification/
+│   ├── action/                    # trilha funcional
+│   ├── classification/            # trilha funcional
+│   ├── data/                      # área transversal
+│   ├── diagnosis/                 # trilha funcional
+│   ├── interaction/               # área transversal — human-in-the-loop
+│   ├── investigation/             # área transversal — técnica de análise
+│   ├── monitoring/                # trilha funcional
+│   ├── prediction/                # trilha funcional
+│   ├── prompt-engineering/        # área transversal
 │   └── META-PATTERNS.md
 │
 ├── prompts/
@@ -57,6 +61,24 @@ ai-decision-intelligence-lab/
 └── integration/
     └── orchestrator-core/
 ```
+
+### Trilhas funcionais
+
+- **Decision** — tomada de decisão; os componentes atuais estão em `prompts/` e `templates/`, sem diretório físico próprio em `models/`.
+- **Prediction** — previsão.
+- **Diagnosis** — diagnóstico.
+- **Action** — ação.
+- **Monitoring** — monitoramento.
+- **Classification** — classificação.
+
+### Áreas transversais
+
+- **Data** — preparação e tratamento de dados.
+- **Prompt Engineering** — construção e ajuste de prompts.
+- **Investigation** — técnica de investigação aplicável a diferentes trilhas.
+- **Interaction** — mecanismos de interação e human-in-the-loop.
+
+Essa distinção evita que uma técnica transversal seja confundida com um domínio funcional e facilita a composição entre componentes.
 
 ## Fluxo de maturação
 
@@ -89,4 +111,4 @@ ORCHESTRATOR CORE
 
 ## Status
 
-O repositório está em fase inicial de estruturação. Os modelos serão desenvolvidos progressivamente conforme o aprendizado e os experimentos avancem.
+O repositório está em fase de estruturação e validação. Os modelos são desenvolvidos progressivamente conforme o aprendizado e os experimentos avancem.
