@@ -12,6 +12,159 @@ Um modelo deve explicitar, sempre que possível:
 - contexto de uso;
 - exemplos de aplicação.
 
+## Organização estrutural
+
+O diretório `models/` distingue **trilhas funcionais de domínio** de **áreas transversais**.
+
+### Trilhas funcionais
+
+São trilhas cujo objeto principal corresponde a uma classe funcional de decisão/análise/operação:
+
+1. **Decision — Tomada de decisão**
+   - foco: estruturar decisões e formas de apoio da IA;
+   - os componentes atuais de matriz de decisão estão em `prompts/` e `templates/`; não há, neste momento, um diretório físico `models/decision/`.
+
+2. **Prediction — Previsão**
+   - foco: organizar dados, preparar contexto, construir e ajustar previsões e validar resultados;
+   - `models/prediction/`.
+
+3. **Diagnosis — Diagnóstico**
+   - foco: compreender problemas e suas causas antes de definir ações corretivas;
+   - `models/diagnosis/`.
+
+4. **Action — Ação**
+   - foco: transformar causas diagnosticadas em ações estruturadas, avaliar impactos e priorizar o que deve avançar;
+   - `models/action/`.
+
+5. **Monitoring — Monitoramento**
+   - foco: acompanhar estados, detectar desvios e produzir sinais para retroalimentar o processo;
+   - `models/monitoring/`.
+
+6. **Classification — Classificação**
+   - foco: atribuir categorias de forma controlada, com referências e mecanismos de calibração;
+   - `models/classification/`.
+
+### Áreas transversais
+
+São mecanismos que podem atravessar várias trilhas funcionais e, portanto, não devem ser tratados como domínios de negócio independentes.
+
+1. **Data — Dados**
+   - preparação, qualidade, estruturação e tratamento da entrada;
+   - `models/data/`.
+
+2. **Prompt Engineering — Engenharia de Prompt**
+   - padrões e técnicas de construção/ajuste de prompts;
+   - `models/prompt-engineering/`.
+
+3. **Investigation — Investigação**
+   - técnica de análise aplicável a diferentes trilhas, e não uma trilha funcional de domínio;
+   - `models/investigation/`.
+   - Candidato 21 — investigação em dois níveis: visão macro → seleção do foco → análise aprofundada.
+
+4. **Interaction — Interação / Human-in-the-loop**
+   - mecanismos de interação em que o usuário fornece informação, direção ou decisão necessária para a continuidade da operação;
+   - `models/interaction/`.
+   - Candidato 15A — solicitação de informação adicional;
+   - Candidato 22 — escolha direcional do foco pelo usuário.
+
+A separação entre trilhas e áreas transversais evita transformar técnicas reutilizáveis em domínios artificiais e permite que um mesmo componente seja composto com diferentes trilhas.
+
+## Monitoring
+
+O Candidato 18 trata do monitoramento contínuo e da detecção de desvios.
+
+O Candidato 19 trata da transformação de uma condição monitorada em **alerta preventivo**, com threshold/condição de disparo e ação preventiva associada.
+
+Fluxo conceitual:
+
+```text
+Monitoring
+    ↓
+detecção / condição relevante
+    ↓
+C19 — alerta preventivo
+    ↓
+ação preventiva
+```
+
+O alerta pode alimentar Action, Diagnosis ou outra etapa, conforme o contexto.
+
+## Decision
+
+Os componentes atuais relacionados à tomada de decisão estratégica estão organizados fora de `models/decision/`:
+
+- `prompts/decision-matrix-enrichment.md` — prompt reutilizável para enriquecimento de matriz de decisão;
+- `templates/decision-matrix.md` — estrutura reutilizável da matriz.
+
+## Diagnosis → Action
+
+A arquitetura registra uma regra de handoff:
+
+```text
+causa conhecida
+    ↓
+Action
+
+causa desconhecida
+    ↓
+Diagnosis
+    ↓
+Action
+    ↓
+Monitoring
+```
+
+Essa regra permanece tratada como **integração entre trilhas**, e não como um modelo independente.
+
+## Investigation
+
+O Candidato 21 — Investigação em dois níveis — permanece formalizado em `models/investigation/`, mas agora é classificado como **área transversal**.
+
+Seu núcleo é:
+
+```text
+visão geral
+   ↓
+seleção do foco
+   ↓
+análise aprofundada
+```
+
+Visualizações e ações decorrentes dos achados são operações downstream e não constituem, por si só, uma nova técnica de investigação.
+
+O Candidato 22 pode ser composto com o C21: o C21 define a estrutura da investigação; o C22 define a interação pela qual o usuário escolhe a direção do aprofundamento.
+
+## Interaction / Human-in-the-loop
+
+A área `models/interaction/` reúne mecanismos em que a continuidade ou a direção da operação depende explicitamente do usuário.
+
+### Candidato 15A — Solicitação de informação adicional
+
+A IA verifica se o contexto é suficiente e, diante de lacunas relevantes, solicita os dados necessários antes de prosseguir.
+
+É um mecanismo de human-in-the-loop orientado à **completude do contexto**.
+
+### Candidato 22 — Escolha direcional do foco
+
+A IA apresenta opções de aprofundamento e solicita ao usuário qual dimensão deseja investigar.
+
+É um mecanismo de human-in-the-loop orientado à **direção da análise**.
+
+Os dois mecanismos são distintos:
+
+```text
+C15A → falta informação necessária
+C22  → falta uma escolha direcional
+```
+
+Eles podem ser usados em conjunto e atravessar diferentes trilhas.
+
+## Classification
+
+O Candidato 23 — calibração de classificação por regras explícitas — permanece em `models/classification/`.
+
+O mecanismo utiliza categorias, referências, exemplos e regras explícitas para reduzir ambiguidades antes da classificação, distinguindo-se da validação reativa do Candidato 12.
+
 ## Meta-padrões transversais
 
 Os padrões que atravessam múltiplas trilhas são registrados separadamente para evitar que observações transversais se confundam com candidatos ou modelos já formalizados.
@@ -25,252 +178,29 @@ No estado atual, estão em observação três padrões:
 
 Esses registros são observações de design e **não constituem princípios arquiteturais formalizados**.
 
-## Índice das trilhas
+## Checkpoint de observações
 
-À medida que o laboratório cresce, os modelos estão sendo organizados por **trilhas funcionais**.
+### Ainda em observação
 
-### 1. Decision — Tomada de decisão
-
-Foco: estruturar decisões e formas de apoio da IA.
-
-- `models/decision/` — modelos conceituais relacionados à decisão.
-- `prompts/decision-matrix-enrichment.md` — prompt reutilizável para enriquecimento de matriz de decisão.
-- `templates/decision-matrix.md` — estrutura reutilizável da matriz.
-
-### 2. Prediction — Previsão
-
-Foco: organizar dados, preparar contexto, construir e ajustar previsões e validar resultados.
-
-- `models/prediction/` — componentes da pipeline de previsão.
-- A trilha está sendo construída como uma sequência modular, evitando duplicação entre etapas.
-- Candidatos já definidos incluem componentes de preparação/qualidade de dados, análise, validação de contexto, previsão e validação da saída.
-
-### 3. Diagnosis — Diagnóstico
-
-Foco: compreender problemas e suas causas antes de definir ações corretivas.
-
-- `models/diagnosis/` — modelos de diagnóstico e análise estruturada de causas.
-- `structured-root-cause-diagnosis.md` — Candidato 14: diagnóstico estruturado de causas usando MECE, Ishikawa e análise quantitativa/qualitativa.
-
-### 4. Action — Ação
-
-Foco: transformar causas diagnosticadas em ações estruturadas, avaliar seus impactos e priorizar o que deve avançar.
-
-- `models/action/` — modelos de sugestão, priorização e decomposição de ações.
-- `action-prioritization.md` — Candidato 16: sugestão, avaliação de impactos e priorização de ações.
-- `action-decomposition.md` — Candidato 17: decomposição hierárquica de ações já priorizadas.
-
-**Ordem estabelecida entre os candidatos 16 e 17:**
-
-```text
-Diagnosis
-    ↓
-Candidato 16 — sugerir, avaliar e priorizar ações
-    ↓
-Candidato 17 — decompor somente as ações priorizadas
-```
-
-Essa ordem reflete o material da Aula 3.2: primeiro ocorre a priorização das ações; posteriormente, uma ação selecionada pode ser expandida em ações secundárias e terciárias. A ordem poderá ser revista se evidência posterior do próprio material justificar outra sequência.
-
-### 5. Monitoring — Monitoramento
-
-Foco: acompanhar continuamente o estado observado, detectar desvios relevantes e retroalimentar o processo.
-
-- `models/monitoring/` — modelos de monitoramento, preparação de contexto e detecção de desvios.
-- `continuous-monitoring.md` — Candidato 18: monitoramento contínuo e detecção de desvios.
-- `context-preparation.md` — Candidato 20: preparação e normalização de contexto antes do monitoramento.
-
-**Status:** Monitoring está confirmada como trilha própria. **Control permanece separado e poderá ser formalizado como trilha própria posteriormente.**
-
-A arquitetura não é uma cadeia linear que termina em Monitoring. Monitoring funciona como mecanismo de retroalimentação:
-
-```text
-Decision → Prediction → Monitoring
-                 ↓
-          desvio / alerta
-                 ↓
-       ┌─────────┴─────────┐
-       ↓                   ↓
-causa conhecida      causa desconhecida
-       ↓                   ↓
-    Action             Diagnosis
-                           ↓
-                         Action
-                           ↓
-                      Monitoring
-```
-
-A regra de handoff é explícita: **causa conhecida → Action; causa desconhecida → Diagnosis → Action**. O retorno a Decision não é o fluxo padrão desse handoff diagnóstico; Decision pode participar em outros pontos do ciclo quando o problema exigir uma nova decisão estratégica.
-
-**Mantidos em observação:**
-- Candidato 19 — alertas preventivos;
-- reposição automatizada de estoques;
-- Control como possível trilha própria futura.
-
-### 6. Investigation — Investigação transversal
-
-Foco: estruturar investigações que não pertencem a uma das trilhas funcionais anteriores.
-
-- `models/investigation/` — modelos de investigação transversal.
-- `two-level-investigation.md` — Candidato 21: investigação em dois níveis, partindo de uma visão macro para um aprofundamento focalizado.
-
-A trilha foi criada para evitar que modelos de investigação transversal sejam artificialmente colocados em `models/analysis/`, que se mantém associado às etapas específicas da pipeline de previsão.
-
-### 7. Classification — Classificação
-
-Foco: estruturar tarefas de classificação com categorias, referências, regras de interpretação e mecanismos de calibração.
-
-- `models/classification/` — modelos de classificação e calibração.
-- `explicit-rule-calibration.md` — Candidato 23: calibração de classificação por regras explícitas.
-
-A trilha é distinta de Diagnosis e Investigation porque seu foco é a **atribuição controlada de categorias**, não a investigação de causas ou a estruturação do processo investigativo.
-
-## Distinção entre Investigation e análise progressiva
-
-A chamada “análise progressiva/drill-down” observada na Aula 4.1 **não constitui um novo candidato independente neste momento**.
-
-Ela corresponde ao núcleo já formalizado no **Candidato 21 — Investigação em dois níveis**:
-
-```text
-visão geral
-   ↓
-seleção do foco
-   ↓
-análise aprofundada
-```
-
-A mesma aula acrescenta etapas de visualização e, posteriormente, de transformação dos achados em ações. Essas etapas são **saídas ou operações downstream da investigação**, e não evidência de um mecanismo investigativo estruturalmente diferente.
-
-Portanto, não há duplicação: o Candidato 21 permanece como o componente de investigação progressiva; visualização e Action podem ser conectadas posteriormente por composição.
-
-## Separação das trilhas
-
-A distinção entre as trilhas é deliberada:
-
-```text
-Decision
-   └── Como estruturar e apoiar decisões
-
-Prediction
-   └── Como analisar dados e produzir/validar previsões
-
-Diagnosis
-   └── Como compreender causas antes de definir ações
-
-Action
-   └── Como transformar causas em ações e priorizá-las
-
-Monitoring
-   └── Como acompanhar estados, detectar desvios e retroalimentar o processo
-
-Investigation
-   └── Como estruturar investigações transversais que atravessam as demais trilhas
-
-Classification
-   └── Como atribuir categorias de forma controlada e calibrada
-```
-
-Uma mesma aplicação pode atravessar mais de uma trilha. Isso não significa que os modelos devam ser fundidos; a integração deve ocorrer somente depois de validação e seleção.
-
-## Observações em evolução
-
-### Candidato 15 — entrada estruturada de evidências
-
-Permanece **em observação** e foi dividido em dois mecanismos diferentes, que não devem ser tratados como formalizados até passarem pelo protocolo de candidatos:
-
-**A. Solicitar informação adicional quando a evidência é insuficiente — hipótese de mecanismo reutilizável**
-
-O conteúdo da Aula 3.1 sugere um mecanismo recorrente: antes de executar a análise, o sistema deve identificar se as informações disponíveis são suficientes e, quando houver lacunas relevantes, solicitar os dados necessários em vez de preencher as lacunas com suposições.
-
-Esse mecanismo **não está formalizado como candidato próprio neste momento**. Ele deve passar pelo mesmo protocolo dos demais candidatos: identificação explícita, definição de pasta, justificativa de reutilização e aprovação antes de qualquer criação.
-
-**B. Taxonomia específica de categorias de evidência — ainda em observação**
-
-A classificação em atas, indicadores, processos internos, fatores externos, percepções, feedbacks etc. ainda não está formalizada como modelo próprio. É necessário observar se a estrutura reaparece em outros contextos antes de transformá-la em componente reutilizável.
-
-### Candidato 22 — escolha direcional do foco pelo usuário
-
-Permanece **em observação**.
-
-O mecanismo observado na Aula 4.1 é diferente dos mecanismos de human-in-the-loop associados aos Candidatos **10 e 15A**:
-
-- **Candidatos 10 e 15A:** a IA solicita **informação faltante ou necessária** para poder prosseguir;
-- **Candidato 22:** a IA solicita ao usuário uma **escolha direcional** sobre qual variável ou dimensão deseja investigar.
-
-Portanto, são sub-famílias diferentes de human-in-the-loop. **Não devem ser fundidos** quando forem eventualmente formalizados.
-
-### Feedback da IA sobre a própria priorização
-
-Permanece como **observação**, mas não é tratado neste índice como um mecanismo novo. O comportamento observado — contestar uma saída da IA e solicitar sua revisão/refazimento — parece ser uma instância do padrão geral de **validação crítica da saída**, já observado nos Candidatos 10 e 12.
-
-Isso não formaliza nem amplia os Candidatos 10 e 12; apenas registra a recorrência do mesmo padrão no contexto da priorização.
-
-## Observação de design — normalização de contexto
-
-Os Candidatos **6, 11 e 20** apresentam um padrão recorrente de **normalização de contexto antes da operação principal**: organizar, preparar ou estruturar o contexto antes que a etapa funcional subsequente seja executada.
-
-Esta recorrência é registrada **como observação de design, não como candidato e não como princípio arquitetural formalizado**.
-
-A segmentação de bases grandes observada na Aula 4.1 **não é contada como quarta ocorrência**, pois seu mecanismo é particionamento da entrada para processamento, e não normalização de contexto semântico/operacional.
-
-Se uma **quarta ocorrência independente, em outra trilha**, surgir no material, o laboratório deverá avaliar se há evidência suficiente para formalizar esse padrão como princípio arquitetural.
-
-## Observação de design — calibração/restrição proativa
-
-Os Candidatos **9 e 23** compartilham um princípio estrutural de **calibração/restrição proativa via regras explícitas**.
-
-- Candidato 9: guardrails para restringir o comportamento da previsão;
-- Candidato 23: referências e regras para calibrar uma classificação.
-
-O **Candidato 12** é diferente: sua validação é reativa, ocorrendo depois da produção da saída.
-
-Com duas ocorrências em trilhas diferentes, este padrão permanece **em observação**, sem formalização arquitetural.
-
-## Checkpoint consolidado de itens em observação
-
-Este checkpoint registra o estado atual sem criar ou formalizar automaticamente nenhum dos itens abaixo.
-
-### Evidência já suficiente para avaliação como candidato formal
-
-**Candidato 15A — solicitar informação adicional quando o contexto é insuficiente**
-- O mecanismo reaparece de forma explícita na Aula 3.3 e foi necessário na própria execução do exercício.
-- Há uma regra operacional clara: quando as informações necessárias não foram fornecidas, interromper a geração da saída dependente e solicitar os dados.
-- **Conclusão:** há evidência suficiente para ser tratado como **candidato formal pendente de aprovação**.
-- Pasta sugerida: `models/context/` ou `models/input-validation/`, a definir antes da criação.
-
-**Candidato 19 — alertas preventivos**
-- O mecanismo aparece estruturado por indicadores + limites + condição de disparo + ação preventiva.
-- A Aula 3.3 fornece vários exemplos concretos de thresholds e descreve o alerta como etapa própria entre monitoramento e ação.
-- **Conclusão:** há evidência suficiente para ser tratado como **candidato formal pendente de aprovação**.
-- Pasta sugerida: `models/monitoring/`.
-
-### Ainda sem evidência suficiente para formalização
-
-**Candidato 15B — taxonomia de categorias de evidência**
+**15B — taxonomia de categorias de evidência**
 - A presença de diferentes tipos de informação é clara, mas ainda não há recorrência suficiente de uma taxonomia estável e independente de contexto.
-- **Status:** observação.
-
-**Candidato 22 — escolha direcional do foco pelo usuário**
-- A Aula 4.1 demonstra explicitamente a solicitação de uma variável escolhida pelo usuário e sua posterior análise.
-- O mecanismo é distinto dos Candidatos 10 e 15A: trata-se de escolha direcional, não de preenchimento de informação faltante.
-- **Status:** observação; manter como sub-família própria de human-in-the-loop e não fundir com 10/15A.
 
 **Reposição automatizada de estoques**
-- O material apresenta automação da reposição como aplicação de IA, mas ainda não foi demonstrado um mecanismo suficientemente geral e separado para justificar um modelo próprio.
-- **Status:** observação.
-
-**Handoff Diagnosis → Action**
-- O fluxo agora aparece explicitamente: causa conhecida → Action; causa desconhecida → Diagnosis → Action.
-- A recorrência já é relevante, mas ainda é possível tratá-lo como uma regra de integração entre trilhas, e não necessariamente como um modelo independente.
-- **Status:** observação de arquitetura/handoff; reavaliar se surgirem outras instâncias com regras próprias.
+- O material apresenta a automação da reposição como aplicação de IA, mas ainda não demonstrou um mecanismo suficientemente geral e separado para justificar um modelo próprio.
 
 **Control**
-- O material menciona monitoramento e ações, mas não estabeleceu ainda um mecanismo de controle suficientemente distinto de Monitoring e Action.
-- **Status:** observação de possível trilha futura.
+- Monitoramento e Action estão formalizados, mas ainda não foi estabelecido um mecanismo de controle suficientemente distinto para justificar uma trilha própria.
 
 **Candidatos 3 e 4**
-- Os padrões identificados anteriormente permanecem úteis como hipóteses reutilizáveis, mas ainda não receberam evidência adicional suficiente para superar o limiar de formalização estabelecido.
-- **Status:** observação.
+- Permanecem como hipóteses reutilizáveis em observação, sem evidência adicional suficiente para formalização.
+
+### Já formalizados
+
+- **15A** — solicitação de informação adicional → `models/interaction/`;
+- **19** — alertas preventivos → `models/monitoring/`;
+- **21** — investigação em dois níveis → `models/investigation/`, como área transversal;
+- **22** — escolha direcional do foco pelo usuário → `models/interaction/`;
+- **23** — calibração de classificação por regras explícitas → `models/classification/`.
 
 ## Regra de maturação
 
@@ -283,4 +213,4 @@ O laboratório prioriza:
 4. possibilidade de validação;
 5. utilidade para outras aplicações.
 
-O fato de um mecanismo parecer promissor ou semelhante a um candidato existente não substitui esse processo.
+Nenhum modelo ou área neste laboratório implica integração automática com o ORCHESTRATOR CORE.
