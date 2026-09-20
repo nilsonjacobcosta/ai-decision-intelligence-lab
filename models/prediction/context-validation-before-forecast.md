@@ -38,7 +38,16 @@ Um contexto futuro validado que possa ser utilizado pelo modelo de previsão, co
 
 Este componente complementa os **Guardrails para Previsão**, que estabelecem limites para o comportamento do forecast.
 
-O **Candidato 8 — Pipeline análise → previsão**, atualmente em observação, deverá futuramente orquestrar a sequência entre análise histórica, validação contextual e aplicação dos guardrails, referenciando este documento em vez de reproduzir suas regras.
+Ele também forma um par complementar com o **Candidato 12 — Validação Crítica da Saída do Forecast**:
+
+- **Candidato 10:** valida o contexto e as premissas antes da geração do forecast.
+- **Candidato 12:** questiona e valida a saída depois que o forecast foi gerado.
+
+Assim, os dois formam dois pontos de controle no mesmo pipeline:
+
+**Validação contextual → Forecast → Validação crítica da saída**
+
+O **Candidato 8 — Pipeline análise → previsão**, atualmente em observação, deverá futuramente orquestrar essa sequência por referência aos documentos, em vez de reproduzir suas regras.
 
 ## Origem
 
