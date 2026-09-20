@@ -61,28 +61,33 @@ Essa ordem reflete o material da Aula 3.2: primeiro ocorre a priorização das a
 
 ### 5. Monitoring — Monitoramento
 
-Foco: acompanhar continuamente o estado observado, detectar desvios relevantes e retroalimentar o processo decisório.
+Foco: acompanhar continuamente o estado observado, detectar desvios relevantes e retroalimentar o processo.
 
-- `models/monitoring/` — modelos de monitoramento e detecção de desvios.
+- `models/monitoring/` — modelos de monitoramento, preparação de contexto e detecção de desvios.
 - `continuous-monitoring.md` — Candidato 18: monitoramento contínuo e detecção de desvios.
+- `context-preparation.md` — Candidato 20: preparação e normalização de contexto antes do monitoramento.
 
-**Status:** Monitoring está agora confirmada como trilha própria. **Control permanece separado e poderá ser formalizado como trilha própria posteriormente.**
+**Status:** Monitoring está confirmada como trilha própria. **Control permanece separado e poderá ser formalizado como trilha própria posteriormente.**
 
-O Candidato 18 altera a representação arquitetural do laboratório: as trilhas não formam uma cadeia linear que termina em Monitoring. Monitoring funciona como mecanismo de retroalimentação.
+A arquitetura não é uma cadeia linear que termina em Monitoring. Monitoring funciona como mecanismo de retroalimentação:
 
 ```
 Decision → Prediction → Monitoring
                  ↓
-          desvio detectado
-             ↙       ↘
-       Diagnosis    Decision
-             ↓
-           Action
-             ↓
-          Monitoring
+          desvio / alerta
+                 ↓
+       ┌─────────┴─────────┐
+       ↓                   ↓
+causa conhecida      causa desconhecida
+       ↓                   ↓
+    Action             Diagnosis
+                           ↓
+                         Action
+                           ↓
+                      Monitoring
 ```
 
-Essa é uma representação cíclica/conceitual, não uma sequência obrigatória para todos os casos. Um desvio pode exigir novo diagnóstico ou retornar diretamente à decisão. A integração entre trilhas continua dependendo de validação e seleção.
+A regra de handoff é explícita: **causa conhecida → Action; causa desconhecida → Diagnosis → Action**. O retorno a Decision não é o fluxo padrão desse handoff diagnóstico; Decision pode participar em outros pontos do ciclo quando o problema exigir uma nova decisão estratégica.
 
 **Mantidos em observação:**
 - Candidato 19 — alertas preventivos;
@@ -131,6 +136,55 @@ A classificação em atas, indicadores, processos internos, fatores externos, pe
 Permanece como **observação**, mas não é tratado neste índice como um mecanismo novo. O comportamento observado — contestar uma saída da IA e solicitar sua revisão/refazimento — parece ser uma instância do padrão geral de **validação crítica da saída**, já observado nos Candidatos 10 e 12.
 
 Isso não formaliza nem amplia os Candidatos 10 e 12; apenas registra a recorrência do mesmo padrão no contexto da priorização.
+
+## Observação de design — normalização de contexto
+
+Os Candidatos **6, 11 e 20** apresentam um padrão recorrente de **normalização de contexto antes da operação principal**: organizar, preparar ou estruturar o contexto antes que a etapa funcional subsequente seja executada.
+
+Esta recorrência é registrada **como observação de design, não como candidato e não como princípio arquitetural formalizado**.
+
+Se uma **quarta ocorrência independente, em outra trilha**, surgir no material, o laboratório deverá avaliar se há evidência suficiente para formalizar esse padrão como princípio arquitetural reutilizável.
+
+## Checkpoint consolidado de itens em observação
+
+Este checkpoint registra o estado atual sem criar ou formalizar automaticamente nenhum dos itens abaixo.
+
+### Evidência já suficiente para avaliação como candidato formal
+
+**Candidato 15A — solicitar informação adicional quando o contexto é insuficiente**
+- O mecanismo reaparece de forma explícita na Aula 3.3 e foi necessário na própria execução do exercício.
+- Há uma regra operacional clara: quando as informações necessárias não foram fornecidas, interromper a geração da saída dependente e solicitar os dados.
+- **Conclusão:** há evidência suficiente para ser tratado como **candidato formal pendente de aprovação**.
+- Pasta sugerida: `models/context/` ou `models/input-validation/`, a definir antes da criação.
+
+**Candidato 19 — alertas preventivos**
+- O mecanismo aparece estruturado por indicadores + limites + condição de disparo + ação preventiva.
+- A Aula 3.3 fornece vários exemplos concretos de thresholds e descreve o alerta como etapa própria entre monitoramento e ação.
+- **Conclusão:** há evidência suficiente para ser tratado como **candidato formal pendente de aprovação**.
+- Pasta sugerida: `models/monitoring/`.
+
+### Ainda sem evidência suficiente para formalização
+
+**Candidato 15B — taxonomia de categorias de evidência**
+- A presença de diferentes tipos de informação é clara, mas ainda não há recorrência suficiente de uma taxonomia estável e independente de contexto.
+- **Status:** observação.
+
+**Reposição automatizada de estoques**
+- O material apresenta automação da reposição como aplicação de IA, mas ainda não foi demonstrado um mecanismo suficientemente geral e separado para justificar um modelo próprio.
+- **Status:** observação.
+
+**Handoff Diagnosis → Action**
+- O fluxo agora aparece explicitamente: causa conhecida → Action; causa desconhecida → Diagnosis → Action.
+- A recorrência já é relevante, mas ainda é possível tratá-lo como uma regra de integração entre trilhas, e não necessariamente como um modelo independente.
+- **Status:** observação de arquitetura/handoff; reavaliar se surgirem outras instâncias com regras próprias.
+
+**Control**
+- O material menciona monitoramento e ações, mas não estabeleceu ainda um mecanismo de controle suficientemente distinto de Monitoring e Action.
+- **Status:** observação de possível trilha futura.
+
+**Candidatos 3 e 4**
+- Os padrões identificados anteriormente permanecem úteis como hipóteses reutilizáveis, mas ainda não receberam evidência adicional suficiente para superar o limiar de formalização estabelecido.
+- **Status:** observação.
 
 ## Regra de maturação
 
