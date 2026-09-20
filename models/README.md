@@ -12,6 +12,18 @@ Um modelo deve explicitar, sempre que possível:
 - contexto de uso;
 - exemplos de aplicação.
 
+## Meta-padrões transversais
+
+Os padrões que atravessam múltiplas trilhas são registrados separadamente para evitar que observações transversais se confundam com candidatos ou modelos já formalizados.
+
+Consulte **[META-PATTERNS.md](META-PATTERNS.md)** para o registro consolidado.
+
+No estado atual, estão em observação dois padrões:
+- **Escolha de método conforme características do problema** — duas ocorrências, incluindo o Candidato 13 e a seleção contextual de frameworks em Diagnosis/Action.
+- **Normalização de contexto antes da operação principal** — três ocorrências, nos Candidatos 6, 11 e 20; uma quarta ocorrência independente deverá motivar avaliação de formalização.
+
+Esses registros são observações de design e **não constituem princípios arquiteturais formalizados**.
+
 ## Índice das trilhas
 
 À medida que o laboratório cresce, os modelos estão sendo organizados por **trilhas funcionais**.
