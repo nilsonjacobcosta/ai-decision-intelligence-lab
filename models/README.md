@@ -39,11 +39,35 @@ Foco: compreender problemas e suas causas antes de definir ações corretivas.
 - `models/diagnosis/` — modelos de diagnóstico e análise estruturada de causas.
 - `structured-root-cause-diagnosis.md` — Candidato 14: diagnóstico estruturado de causas usando MECE, Ishikawa e análise quantitativa/qualitativa.
 
+### 4. Action — Ação
+
+Foco: transformar causas diagnosticadas em ações estruturadas, avaliar seus impactos e priorizar o que deve avançar.
+
+- `models/action/` — modelos de sugestão, priorização e decomposição de ações.
+- `action-prioritization.md` — Candidato 16: sugestão, avaliação de impactos e priorização de ações.
+- `action-decomposition.md` — Candidato 17: decomposição hierárquica de ações já priorizadas.
+
+**Ordem estabelecida entre os candidatos 16 e 17:**
+
+```
+Diagnosis
+    ↓
+Candidato 16 — sugerir, avaliar e priorizar ações
+    ↓
+Candidato 17 — decompor somente as ações priorizadas
+```
+
+Essa ordem reflete o material da Aula 3.2: primeiro ocorre a priorização das ações; posteriormente, uma ação selecionada pode ser expandida em ações secundárias e terciárias. A ordem poderá ser revista se evidência posterior do próprio material justificar outra sequência.
+
+### Próxima trilha candidata — Monitoring / Control
+
+O material indica que, após analisar causas e propor melhorias, o próximo passo será criar **modelos de monitoramento e controle**. Portanto, Monitoring / Control permanece como **trilha candidata**, ainda não confirmada como quarta/quinta trilha formal do laboratório.
+
 ## Separação das trilhas
 
 A distinção entre as trilhas é deliberada:
 
-```text
+```
 Decision
    └── Como estruturar e apoiar decisões
 
@@ -52,6 +76,9 @@ Prediction
 
 Diagnosis
    └── Como compreender causas antes de definir ações
+
+Action
+   └── Como transformar causas em ações e priorizá-las
 ```
 
 Uma mesma aplicação pode atravessar mais de uma trilha. Isso não significa que os modelos devam ser fundidos; a integração deve ocorrer somente depois de validação e seleção.
@@ -71,6 +98,12 @@ Esse mecanismo **não está formalizado como candidato próprio neste momento**.
 **B. Taxonomia específica de categorias de evidência — ainda em observação**
 
 A classificação em atas, indicadores, processos internos, fatores externos, percepções, feedbacks etc. ainda não está formalizada como modelo próprio. É necessário observar se a estrutura reaparece em outros contextos antes de transformá-la em componente reutilizável.
+
+### Feedback da IA sobre a própria priorização
+
+Permanece como **observação**, mas não é tratado neste índice como um mecanismo novo. O comportamento observado — contestar uma saída da IA e solicitar sua revisão/refazimento — parece ser uma instância do padrão geral de **validação crítica da saída**, já observado nos Candidatos 10 e 12.
+
+Isso não formaliza nem amplia os Candidatos 10 e 12; apenas registra a recorrência do mesmo padrão no contexto da priorização.
 
 ## Regra de maturação
 
