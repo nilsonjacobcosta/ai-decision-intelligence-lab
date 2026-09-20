@@ -59,9 +59,36 @@ Candidato 17 — decompor somente as ações priorizadas
 
 Essa ordem reflete o material da Aula 3.2: primeiro ocorre a priorização das ações; posteriormente, uma ação selecionada pode ser expandida em ações secundárias e terciárias. A ordem poderá ser revista se evidência posterior do próprio material justificar outra sequência.
 
-### Próxima trilha candidata — Monitoring / Control
+### 5. Monitoring — Monitoramento
 
-O material indica que, após analisar causas e propor melhorias, o próximo passo será criar **modelos de monitoramento e controle**. Portanto, Monitoring / Control permanece como **trilha candidata**, ainda não confirmada como quarta/quinta trilha formal do laboratório.
+Foco: acompanhar continuamente o estado observado, detectar desvios relevantes e retroalimentar o processo decisório.
+
+- `models/monitoring/` — modelos de monitoramento e detecção de desvios.
+- `continuous-monitoring.md` — Candidato 18: monitoramento contínuo e detecção de desvios.
+
+**Status:** Monitoring está agora confirmada como trilha própria. **Control permanece separado e poderá ser formalizado como trilha própria posteriormente.**
+
+O Candidato 18 altera a representação arquitetural do laboratório: as trilhas não formam uma cadeia linear que termina em Monitoring. Monitoring funciona como mecanismo de retroalimentação.
+
+```
+Decision → Prediction → Monitoring
+                 ↓
+          desvio detectado
+             ↙       ↘
+       Diagnosis    Decision
+             ↓
+           Action
+             ↓
+          Monitoring
+```
+
+Essa é uma representação cíclica/conceitual, não uma sequência obrigatória para todos os casos. Um desvio pode exigir novo diagnóstico ou retornar diretamente à decisão. A integração entre trilhas continua dependendo de validação e seleção.
+
+**Mantidos em observação:**
+- Candidato 19 — alertas preventivos;
+- reposição automatizada de estoques;
+- Control como possível trilha própria futura.
+
 
 ## Separação das trilhas
 
