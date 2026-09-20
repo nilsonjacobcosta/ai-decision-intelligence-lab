@@ -60,15 +60,13 @@ Uma mesma aplicação pode atravessar mais de uma trilha. Isso não significa qu
 
 ### Candidato 15 — entrada estruturada de evidências
 
-Permanece **em observação** e foi dividido em dois mecanismos diferentes:
+Permanece **em observação** e foi dividido em dois mecanismos diferentes, que não devem ser tratados como formalizados até passarem pelo protocolo de candidatos:
 
-**A. Solicitar informação adicional quando a evidência é insuficiente — padrão maduro**
+**A. Solicitar informação adicional quando a evidência é insuficiente — hipótese de mecanismo reutilizável**
 
-Este mecanismo já aparece de forma suficientemente clara e é conceitualmente próximo do **Candidato 10**, que valida o contexto antes do forecast. A regra reutilizável é:
+O conteúdo da Aula 3.1 sugere um mecanismo recorrente: antes de executar a análise, o sistema deve identificar se as informações disponíveis são suficientes e, quando houver lacunas relevantes, solicitar os dados necessários em vez de preencher as lacunas com suposições.
 
-> Se as informações disponíveis não forem suficientes para executar a análise com qualidade, identificar as lacunas e solicitar os dados necessários antes de prosseguir.
-
-Isso deve ser tratado como um possível mecanismo transversal, e não como uma nova taxonomia de evidências.
+Esse mecanismo **não está formalizado como candidato próprio neste momento**. Ele deve passar pelo mesmo protocolo dos demais candidatos: identificação explícita, definição de pasta, justificativa de reutilização e aprovação antes de qualquer criação.
 
 **B. Taxonomia específica de categorias de evidência — ainda em observação**
 
@@ -84,4 +82,6 @@ O laboratório prioriza:
 3. clareza do mecanismo;
 4. possibilidade de validação;
 5. utilidade para outras aplicações.
+
+O fato de um mecanismo parecer promissor ou semelhante a um candidato existente não substitui esse processo.
 
