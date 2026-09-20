@@ -18,9 +18,10 @@ Os padrões que atravessam múltiplas trilhas são registrados separadamente par
 
 Consulte **[META-PATTERNS.md](META-PATTERNS.md)** para o registro consolidado.
 
-No estado atual, estão em observação dois padrões:
+No estado atual, estão em observação três padrões:
 - **Escolha de método conforme características do problema** — duas ocorrências, incluindo o Candidato 13 e a seleção contextual de frameworks em Diagnosis/Action.
-- **Normalização de contexto antes da operação principal** — três ocorrências, nos Candidatos 6, 11 e 20; uma quarta ocorrência independente deverá motivar avaliação de formalização.
+- **Normalização de contexto antes da operação principal** — três ocorrências, nos Candidatos 6, 11 e 20; a segmentação de bases grandes não conta como quarta ocorrência porque representa particionamento da entrada, não normalização de contexto.
+- **Calibração/restrição proativa via regras explícitas** — duas ocorrências, nos Candidatos 9 e 23; o Candidato 12 representa controle reativo da saída e permanece conceitualmente separado.
 
 Esses registros são observações de design e **não constituem princípios arquiteturais formalizados**.
 
@@ -115,6 +116,33 @@ Foco: estruturar investigações que não pertencem a uma das trilhas funcionais
 
 A trilha foi criada para evitar que modelos de investigação transversal sejam artificialmente colocados em `models/analysis/`, que se mantém associado às etapas específicas da pipeline de previsão.
 
+### 7. Classification — Classificação
+
+Foco: estruturar tarefas de classificação com categorias, referências, regras de interpretação e mecanismos de calibração.
+
+- `models/classification/` — modelos de classificação e calibração.
+- `explicit-rule-calibration.md` — Candidato 23: calibração de classificação por regras explícitas.
+
+A trilha é distinta de Diagnosis e Investigation porque seu foco é a **atribuição controlada de categorias**, não a investigação de causas ou a estruturação do processo investigativo.
+
+## Distinção entre Investigation e análise progressiva
+
+A chamada “análise progressiva/drill-down” observada na Aula 4.1 **não constitui um novo candidato independente neste momento**.
+
+Ela corresponde ao núcleo já formalizado no **Candidato 21 — Investigação em dois níveis**:
+
+```text
+visão geral
+   ↓
+seleção do foco
+   ↓
+análise aprofundada
+```
+
+A mesma aula acrescenta etapas de visualização e, posteriormente, de transformação dos achados em ações. Essas etapas são **saídas ou operações downstream da investigação**, e não evidência de um mecanismo investigativo estruturalmente diferente.
+
+Portanto, não há duplicação: o Candidato 21 permanece como o componente de investigação progressiva; visualização e Action podem ser conectadas posteriormente por composição.
+
 ## Separação das trilhas
 
 A distinção entre as trilhas é deliberada:
@@ -137,6 +165,9 @@ Monitoring
 
 Investigation
    └── Como estruturar investigações transversais que atravessam as demais trilhas
+
+Classification
+   └── Como atribuir categorias de forma controlada e calibrada
 ```
 
 Uma mesma aplicação pode atravessar mais de uma trilha. Isso não significa que os modelos devam ser fundidos; a integração deve ocorrer somente depois de validação e seleção.
@@ -180,7 +211,20 @@ Os Candidatos **6, 11 e 20** apresentam um padrão recorrente de **normalizaçã
 
 Esta recorrência é registrada **como observação de design, não como candidato e não como princípio arquitetural formalizado**.
 
-Se uma **quarta ocorrência independente, em outra trilha**, surgir no material, o laboratório deverá avaliar se há evidência suficiente para formalizar esse padrão como princípio arquitetural reutilizável.
+A segmentação de bases grandes observada na Aula 4.1 **não é contada como quarta ocorrência**, pois seu mecanismo é particionamento da entrada para processamento, e não normalização de contexto semântico/operacional.
+
+Se uma **quarta ocorrência independente, em outra trilha**, surgir no material, o laboratório deverá avaliar se há evidência suficiente para formalizar esse padrão como princípio arquitetural.
+
+## Observação de design — calibração/restrição proativa
+
+Os Candidatos **9 e 23** compartilham um princípio estrutural de **calibração/restrição proativa via regras explícitas**.
+
+- Candidato 9: guardrails para restringir o comportamento da previsão;
+- Candidato 23: referências e regras para calibrar uma classificação.
+
+O **Candidato 12** é diferente: sua validação é reativa, ocorrendo depois da produção da saída.
+
+Com duas ocorrências em trilhas diferentes, este padrão permanece **em observação**, sem formalização arquitetural.
 
 ## Checkpoint consolidado de itens em observação
 

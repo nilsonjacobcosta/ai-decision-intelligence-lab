@@ -62,6 +62,19 @@ Operação principal
 Resultado
 ```
 
+### Avaliação da segmentação de bases grandes
+
+A orientação da Aula 4.1 para **segmentar bases de dados muito grandes em partes menores** não é contada como quarta ocorrência deste meta-padrão.
+
+A razão é estrutural: segmentar uma base é uma forma de **decomposição/particionamento da entrada para facilitar processamento e precisão**, enquanto o meta-padrão registrado aqui exige **normalização ou preparação do contexto semântico/operacional antes da operação principal**.
+
+Portanto:
+
+- Candidatos 6, 11 e 20 → normalização/preparação de contexto;
+- segmentação de bases grandes → particionamento da entrada.
+
+Neste estágio, não há evidência suficiente para promover o meta-padrão de normalização a princípio arquitetural.
+
 ### Critério de evolução
 
 Esta é uma recorrência mais forte, com **três ocorrências já identificadas**.
@@ -70,7 +83,70 @@ Conforme a regra estabelecida para o laboratório, uma **quarta ocorrência inde
 
 ---
 
-## Relação entre os dois meta-padrões
+## 3. Calibração/restrição proativa via regras explícitas
+
+**Status:** em observação.
+
+### Evidência atual
+
+**Ocorrência 1 — Candidato 9**
+
+O Candidato 9 utiliza regras e restrições explícitas como guardrails antes da operação de previsão.
+
+**Ocorrência 2 — Candidato 23 (Classification)**
+
+O Candidato 23 utiliza categorias, referências, exemplos e regras explícitas para calibrar previamente uma tarefa de classificação, incluindo tratamento de negações, modificadores e casos-limite.
+
+### Abstração provisória
+
+```text
+Operação potencialmente ambígua / aberta
+   ↓
+Regras, limites e referências explícitos
+   ↓
+Operação principal
+   ↓
+Resultado mais controlado
+```
+
+As duas ocorrências compartilham o princípio de **reduzir proativamente o espaço de comportamento da IA por meio de regras explícitas**.
+
+O mecanismo concreto, porém, permanece específico:
+
+- Candidato 9 → guardrails/restrições para previsão;
+- Candidato 23 → calibração de classificação.
+
+### Distinção em relação ao Candidato 12
+
+O Candidato 12 representa uma forma **reativa** de controle: a saída já foi produzida e então é criticada, questionada ou recalibrada quando apresenta comportamento inesperado.
+
+Assim:
+
+```text
+C9 / C23
+controle proativo
+      ↓
+operação
+      ↓
+saída
+
+C12
+operação
+      ↓
+saída
+      ↓
+validação crítica
+      ↓
+recalibração, se necessária
+```
+
+### Critério de evolução
+
+O padrão possui atualmente **duas ocorrências em trilhas diferentes**. Deve permanecer em observação até que uma nova ocorrência independente permita avaliar sua formalização como princípio arquitetural.
+
+---
+
+## Relação entre os meta-padrões
 
 Os padrões são distintos e não devem ser fundidos neste estágio:
 
@@ -78,6 +154,7 @@ Os padrões são distintos e não devem ser fundidos neste estágio:
 |---|---|
 | Escolha de método conforme o problema | **Qual método devo aplicar a este problema?** |
 | Normalização de contexto | **Como devo preparar o contexto antes de aplicar o método?** |
+| Calibração/restrição proativa | **Quais regras e limites devo estabelecer antes da operação?** |
 
 Eles podem eventualmente aparecer encadeados:
 
@@ -90,7 +167,11 @@ Características do problema
    ↓
 Escolha do método
    ↓
+Calibração / restrições
+   ↓
 Operação principal
+   ↓
+Validação da saída
 ```
 
 Essa combinação é uma hipótese de design, não uma arquitetura formalizada.
@@ -100,6 +181,7 @@ Essa combinação é uma hipótese de design, não uma arquitetura formalizada.
 Meta-padrões neste arquivo são **observações transversais**, não candidatos aprovados e não componentes implementáveis.
 
 A formalização de qualquer meta-padrão exige evidência adicional e avaliação explícita segundo os critérios de maturação do laboratório:
+
 1. recorrência;
 2. independência de contexto;
 3. clareza do mecanismo;

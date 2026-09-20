@@ -47,6 +47,7 @@ ai-decision-intelligence-lab/
 │   ├── recommendations/
 │   ├── uncertainty/
 │   ├── investigation/
+│   ├── classification/
 │   └── META-PATTERNS.md
 │
 ├── prompts/
