@@ -45,7 +45,9 @@ ai-decision-intelligence-lab/
 │   ├── scenarios/
 │   ├── feedback/
 │   ├── recommendations/
-│   └── uncertainty/
+│   ├── uncertainty/
+│   ├── investigation/
+│   └── META-PATTERNS.md
 │
 ├── prompts/
 ├── templates/
