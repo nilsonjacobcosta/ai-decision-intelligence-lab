@@ -6,7 +6,7 @@ Este arquivo serve para preservar recorrências observadas sem antecipar sua for
 
 ## 1. Escolha de método conforme características do problema
 
-**Status:** **promovido a princípio arquitetural.**
+**Status:** **meta-padrão fortalecido — aguardando reforço.**
 
 ### Evidência atual
 
@@ -14,9 +14,9 @@ Este arquivo serve para preservar recorrências observadas sem antecipar sua for
 
 O Candidato 13 representa o padrão de selecionar uma técnica conforme as características do problema de previsão.
 
-**Ocorrência 2 — Diagnosis / Action**
+**Ocorrência 2 — Diagnosis / Action — evidência secundária**
 
-Na aplicação dos frameworks da Aula 3, a seleção contextual de frameworks segue a mesma estrutura: diante de um problema, características relevantes do problema orientam a escolha do método/framework a aplicar. Exemplos apresentados incluem Ishikawa para causas-raiz, Pareto para priorização, PDCA para melhoria contínua e 5W2H para estruturação de ações.
+Na aplicação dos frameworks da Aula 3, a seleção contextual de frameworks apresenta uma estrutura semelhante: diante de um problema, características relevantes do problema orientam a escolha do método/framework a aplicar. Exemplos apresentados incluem Ishikawa para causas-raiz, Pareto para priorização, PDCA para melhoria contínua e 5W2H para estruturação de ações.
 
 ### Abstração
 
@@ -34,38 +34,23 @@ Resultado
 
 A segunda ocorrência é estruturalmente semelhante ao Candidato 13, embora aplicada a Diagnosis/Action em vez de Prediction.
 
+**Peso da evidência:** esta ocorrência é considerada **mais fraca** para fins de promoção arquitetural. Na avaliação anterior, ela foi explicitamente considerada insuficiente para justificar sequer um candidato formal. Portanto, permanece como evidência de apoio/observação, e não como ocorrência de mesmo peso que C13 e C25.
+
 **Ocorrência 3 — Candidato 25 (Segmentation)**
 
 O C25 apresenta diferentes estratégias de segmentação — dimensões demográficas/comportamentais e clustering — e orienta a escolha conforme o objetivo, as variáveis disponíveis e o tipo de estrutura que se pretende identificar. fileciteturn123file0L214-L229
 
-### Promoção a princípio arquitetural
+### Avaliação de maturação
 
-A terceira ocorrência independente, em outra trilha funcional, fornece evidência suficiente para promover o padrão a princípio arquitetural do laboratório:
+C13 e C25 fornecem duas ocorrências fortes em trilhas funcionais diferentes. A ocorrência de Diagnosis/Action é estruturalmente semelhante, mas sua evidência foi anteriormente considerada insuficiente para formalização.
 
-> **Escolher o método conforme as características do problema, dos dados disponíveis e do objetivo, em vez de assumir uma técnica fixa como universalmente adequada.**
+Assim, o padrão **não é promovido ainda a princípio arquitetural**.
 
-A escolha deve ser justificada antes da aplicação quando isso for relevante para a operação.
+Ele passa a ser registrado como **meta-padrão fortalecido, aguardando reforço**.
 
-A promoção não transforma o princípio em um catálogo prescritivo de métodos. Ela estabelece um **critério de seleção**, deixando a escolha concreta dependente do contexto.
+O reforço necessário deve vir de uma nova ocorrência independente e suficientemente forte — preferencialmente com mecanismo explícito de seleção, critérios de escolha e relação verificável entre características do problema e método escolhido.
 
-### Princípio arquitetural decorrente
-
-O laboratório passa a tratar **seleção contextual do método** como uma regra de composição transversal:
-
-```text
-características do problema
-        ↓
-características dos dados / contexto
-        ↓
-objetivo da operação
-        ↓
-escolha justificada do método
-        ↓
-aplicação
-```
-
-Isso não cria uma nova trilha; orienta como componentes de diferentes trilhas devem ser escolhidos.
-
+### Abstração operacional mantida em observação
 ---
 
 ## 2. Normalização de contexto antes da operação principal
@@ -204,7 +189,7 @@ Essa combinação é uma hipótese de design, não uma arquitetura formalizada.
 
 ## Regra de governança
 
-Os registros em observação neste arquivo são **hipóteses transversais**, não candidatos aprovados e não componentes implementáveis. Quando um padrão é promovido, seu princípio arquitetural é explicitado no próprio registro e em `PRINCIPLES.md`.
+Este arquivo é a fonte de verdade para observação, avaliação e eventual promoção dos meta-padrões. `PRINCIPLES.md` apenas referencia princípios já formalizados, evitando duplicação de conteúdo e risco de desalinhamento.
 
 A formalização de qualquer meta-padrão exige evidência adicional e avaliação explícita segundo os critérios de maturação do laboratório:
 
