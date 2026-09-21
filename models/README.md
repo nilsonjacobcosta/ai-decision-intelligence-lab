@@ -276,6 +276,9 @@ A Aula 4.3 também apresenta a combinação de e-mail do gestor e tabela do prod
 **Confirmação humana ambígua**
 - Permanece em observação latente em Interaction; a evidência atual ainda não justifica candidato próprio.
 
+**Candidato 4**
+- Permanece como hipótese reutilizável em observação.
+
 **Teste-piloto → Monitoring → Alert → Action**
 - Permanece como hipótese de integração pós-implementação e não é contado como nova ocorrência da família de refinamento iterativo.
 
