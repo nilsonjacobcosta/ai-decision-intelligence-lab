@@ -498,3 +498,48 @@ Futuras avaliações deverão examinar:
 Somente depois será possível decidir se existe um único meta-padrão, subfamílias independentes ou apenas semelhança superficial.
 
 Por enquanto, a hipótese fica **preservada e pendente**, sem promoção a princípio arquitetural e sem contagem de ocorrências.
+
+
+---
+
+## 9. Adaptação de saída para audiência/comunicação — categoria latente
+
+**Status:** **categoria latente em observação — primeira instância registrada; sem contagem de recorrência para promoção.**
+
+A hipótese descreve mecanismos que transformam a **saída de uma análise ou conhecimento já produzido** para adequá-la à audiência, ao nível de conhecimento ou à finalidade de comunicação, sem que a adaptação constitua necessariamente uma nova operação analítica.
+
+### Primeira instância — ELI5
+
+A técnica **ELI5 (Explain Like I'm 5)** é apresentada como forma de simplificar conceitos complexos, utilizando linguagem e analogias acessíveis para públicos com diferentes níveis de conhecimento prévio. Sua função é facilitar compreensão e reduzir mal-entendidos, inclusive na comunicação de modelos de ciência de dados, estratégias e soluções. 
+
+### Abstração provisória
+
+```text
+análise / conhecimento / resultado
+             ↓
+adaptação à audiência
+             ↓
+linguagem / analogia / nível de detalhe adequado
+             ↓
+saída comunicacional
+```
+
+### Distinção em relação às categorias existentes
+
+Esta categoria deve permanecer separada de:
+
+- **C6 / C11 / C20 — preparação de entrada/contexto:** organizam, normalizam ou preparam informação **antes da operação analítica principal**;
+- **operação analítica central:** produz análise, previsão, classificação, segmentação, diagnóstico, recomendação etc.;
+- **C24 — preparação para execução humana:** transforma ação/oportunidade em artefato operacional para implementação e acompanhamento.
+
+A hipótese aqui é diferente: a operação central já ocorreu e o mecanismo modifica **a forma de apresentação da saída para o receptor**.
+
+### Critério para eventual promoção a área transversal
+
+Uma segunda ocorrência **forte e estruturalmente independente**, especialmente se utilizar outra técnica ou outro nome para desempenhar a mesma função, deverá disparar avaliação específica sobre a criação de uma quinta área transversal:
+
+> **Adaptação de saída para audiência/comunicação**
+
+Essa avaliação deverá considerar se existe mecanismo reutilizável suficientemente independente de Prompt Engineering genérico e se a função aparece em múltiplos contextos do laboratório.
+
+Até lá, ELI5 permanece como **primeira instância de uma categoria latente**, e não como candidato formal, modelo ou nova área transversal.
