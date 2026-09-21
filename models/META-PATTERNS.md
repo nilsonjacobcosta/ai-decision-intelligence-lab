@@ -427,80 +427,140 @@ Até lá, permanece como observação e não como candidato formal.
 
 ## 8. Refinamento iterativo até estabilização/convergência
 
-**Status:** **hipótese em observação — ocorrências ainda não contabilizadas.**
+**Status:** **hipótese em observação — histórico acumulado com subfamílias mecanísticas distintas.**
 
-A hipótese descreve um ciclo no qual um resultado inicial é avaliado, insuficiências ou ambiguidades são identificadas, o procedimento ou representação é refinado e uma nova execução produz resultado revisado. O ciclo pode repetir-se até algum critério de estabilização, suficiência ou convergência.
+A hipótese descreve um ciclo no qual um estado, artefato, regra ou análise inicial é avaliado, recebe feedback ou nova informação, é modificado e produz um novo estado. O padrão só deve ser tratado como **refinamento iterativo em sentido forte** quando houver evidência suficiente de progressão do estado anterior e alguma noção de suficiência, estabilização ou convergência.
 
-```text
-resultado inicial
-      ↓
-avaliação / identificação de insuficiências
-      ↓
-refinamento
-      ↓
-novo resultado
-      ↓
-nova avaliação
-      ↓
-... repetição ...
-      ↓
-estabilização / convergência
-```
+### Cinco critérios operacionais
 
-**Não contar ocorrências entre si neste estágio.** As quatro categorias devem permanecer separadas até que se demonstre mecanismo comum, critério de parada e independência de contexto.
+A régua específica desta hipótese passa a ser aplicada retroativamente a todas as subfamílias já observadas:
+
+1. **Estado inicial identificável** — existe um resultado, artefato, regra, modelo ou análise inicial que serve de ponto de partida.
+2. **Feedback ou nova informação** — existe avaliação, erro, lacuna, resposta, observação ou informação adicional que desencadeia a próxima transformação.
+3. **Objeto modificado identificável** — é possível apontar o que efetivamente muda entre os ciclos.
+4. **Continuidade entre estados** — o novo estado preserva ou incorpora parte relevante do estado anterior, em vez de ser apenas uma execução independente ou uma nova geração sem relação estrutural.
+5. **Noção de estabilização, suficiência ou convergência** — existe algum critério explícito ou suficientemente identificável que indique quando o processo pode parar, estabilizar ou ser considerado adequado.
+
+O quinto critério é deliberadamente mais exigente. **Repetir, reexecutar ou enriquecer um artefato não basta para caracterizar convergência.** Quando não houver qualquer noção de suficiência, estabilização ou parada, a evidência pode continuar sendo relevante para uma hipótese mais ampla de refinamento, mas deve ser marcada como **parcial/fraca** para a subfamília de refinamento até estabilização/convergência.
+
+### Aplicação retroativa às subfamílias
+
+| Categoria | Evidência | Critérios 1–4 | Critério 5 — estabilização/suficiência/convergência | Peso atual |
+|---|---|---|---|---|
+| **A — Iteração algorítmica interna** | C25 / K-means | Satisfeitos | **Satisfeito de forma explícita:** iterações até estabilidade segundo o critério algorítmico | **Forte** |
+| **B — Iteração de análise/engenharia de regras** | C23 | Satisfeitos | **Não demonstrado de forma suficiente:** há recalibração quando os resultados não estão adequados, mas não há critério explícito de estabilização/convergência | **Parcial/fraca para convergência** |
+| **C — Iteração de construção de artefato** | enriquecimento iterativo da matriz de decisão | Satisfeitos | **Não demonstrado:** há enriquecimento sucessivo, mas o material não estabelece condição de suficiência, estabilidade ou parada | **Parcial/fraca para convergência** |
+| **D — Iteração decisória/analítica** | SWOT — ajuste/refinamento | Satisfeitos | **Satisfeito em sentido de suficiência:** o processo prevê ajustes sucessivos e encerramento quando o decisor se sente confortável com a análise; não equivale, porém, à convergência matemática de A | **Forte, com ressalva** |
 
 ### Categoria A — Iteração algorítmica interna
 
-**Exemplo observado: C25 / K-means**
+**Exemplo: C25 / K-means**
 
-Iterações entre atribuição aos clusters e atualização dos centróides até estabilidade segundo o critério algorítmico.
+O mecanismo possui ciclos explícitos de atribuição aos clusters e atualização dos centróides, prosseguindo até estabilidade segundo o critério algorítmico.
 
-Pergunta estrutural: **o próprio algoritmo possui ciclo explícito de atualização e critério de estabilização?**
+Pergunta estrutural:
+
+> **O próprio algoritmo possui ciclo explícito de atualização e critério de estabilização?**
+
+Esta é a manifestação mais forte da hipótese porque o quinto critério é parte constitutiva do mecanismo.
 
 ### Categoria B — Iteração de análise/engenharia de regras
 
-**Exemplo observado: C23**
+**Exemplo: C23**
 
-A classificação pode revelar ambiguidades, negações, modificadores e casos-limite; regras e referências podem então ser refinadas para nova execução.
+A classificação pode revelar ambiguidades, negações, modificadores e casos-limite; referências e regras podem então ser refinadas para uma nova execução.
 
-Pergunta estrutural: **a avaliação da saída modifica explicitamente o mecanismo usado na próxima execução?**
+Os critérios 1–4 são atendidos:
+
+- há uma classificação inicial;
+- os resultados funcionam como feedback;
+- regras/referências são o objeto modificado;
+- a nova calibração preserva a estrutura anterior e acrescenta ou ajusta regras.
+
+Entretanto, **o critério 5 não está demonstrado com o mesmo rigor de A**. O C23 registra ajuste quando o resultado não está suficientemente calibrado, mas não estabelece um critério operacional de estabilização ou uma condição clara de parada.
+
+Portanto, B permanece evidência válida da hipótese mais ampla de **refinamento de análise/regras**, mas é **evidência parcial/fraca especificamente para “refinamento até estabilização/convergência”**.
 
 ### Categoria C — Iteração de construção de artefato
 
-**Exemplo observado: enriquecimento iterativo da matriz de decisão**
+**Exemplo: enriquecimento iterativo da matriz de decisão**
 
-A matriz inicial pode ser analisada, lacunas identificadas e novas decisões/informações acrescentadas, produzindo uma matriz revisada.
+A matriz inicial pode ser analisada, lacunas identificadas e novas decisões/informações acrescentadas, produzindo uma matriz revisada. O material também descreve a possibilidade de enriquecimento iterativo.
 
-Pergunta estrutural: **o resultado da análise modifica o próprio artefato que será analisado novamente?**
+Os critérios 1–4 são atendidos:
+
+- existe matriz inicial;
+- a análise identifica lacunas ou novas necessidades;
+- o próprio artefato é modificado;
+- a versão seguinte incorpora a anterior em vez de substituí-la por um artefato sem relação.
+
+Contudo, **o critério 5 também não está demonstrado**. O material não define quando a matriz estará suficientemente completa, estável ou adequada para encerrar o enriquecimento.
+
+Assim, C deve ser preservada como **evidência parcial/fraca para convergência**, embora seja uma evidência relevante e estrutural para a hipótese mais ampla de **refinamento iterativo de artefatos**.
 
 ### Categoria D — Iteração decisória/analítica
 
-**Hipótese ainda sem ocorrência formal registrada.**
+**Exemplo atual: SWOT — ajuste/refinamento**
 
-Refere-se a ciclos em que análise, feedback ou resultado de uma decisão alimentam explicitamente nova análise, revisão de alternativas ou nova decisão.
+A SWOT apresenta uma manifestação diferente das categorias A–C: o objeto é uma análise construída em interação com o decisor.
 
-Pergunta estrutural: **uma etapa posterior retroalimenta explicitamente a análise ou decisão seguinte?**
+A sequência observada é:
 
-### Regra de não contagem neste estágio
+```
+SWOT inicial
+      ↓
+perguntas / feedback do decisor
+      ↓
+ajustes finos
+      ↓
+análise revisada
+      ↓
+nova avaliação
+      ↓
+suficiência para o decisor
+```
 
-As categorias A, B, C e D **não devem ser somadas como quatro ocorrências de um único meta-padrão**.
+Os critérios 1–4 estão presentes. O quinto critério também possui evidência suficiente **em sentido de suficiência prática**, porque o processo é encerrado quando o decisor se sente confortável com a análise.
 
-Futuras avaliações deverão examinar:
+Isso deve ser distinguido de A:
 
-1. mecanismo explícito de iteração;
-2. objeto modificado a cada ciclo;
-3. feedback que provoca a modificação;
-4. critério de estabilização, suficiência ou parada;
-5. independência de contexto;
-6. utilidade transversal;
-7. relação estrutural entre categorias.
+- **A:** estabilidade definida pelo próprio mecanismo algorítmico;
+- **D:** suficiência definida pelo processo humano de revisão.
 
-Somente depois será possível decidir se existe um único meta-padrão, subfamílias independentes ou apenas semelhança superficial.
+Portanto, D é considerada **evidência forte da hipótese transversal**, mas com ressalva: sua noção de estabilização é humana/pragmática, não matemática ou algorítmica.
 
-Por enquanto, a hipótese fica **preservada e pendente**, sem promoção a princípio arquitetural e sem contagem de ocorrências.
+### Distinção dentro da Aula 6 — “ajustar/refinar” versus “refazer o processo”
 
+A Aula 6 contém duas manifestações que não devem ser contabilizadas como equivalentes.
 
----
+#### SWOT — “ajustar/refinar”
+
+A SWOT solicita perguntas adicionais para **ajustes finos** e refinamento da análise. Trata-se de modificação incremental do estado anterior.
+
+Por isso, é a evidência da Aula 6 que efetivamente reforça a hipótese de **refinamento progressivo**.
+
+#### Decisão intuitiva — “refazer o processo”
+
+No Prompt 3, após receber as respostas do decisor, a instrução é **“refaça o processo”**. O mecanismo demonstra reprocessamento condicionado por novo contexto humano, mas não demonstra, por si só, que o novo resultado preserve e refine incrementalmente o anterior nem que exista um critério de estabilização.
+
+A manifestação intuitiva é, portanto, registrada como **evidência relacionada de reprocessamento contextual**, não como ocorrência adicional de convergência.
+
+Essa distinção é importante para evitar que qualquer segunda execução de um prompt seja artificialmente classificada como iteração.
+
+### Regra de contagem e evolução
+
+As categorias A, B, C e D **não são somadas mecanicamente como quatro ocorrências equivalentes**.
+
+O histórico atual deve ser interpretado assim:
+
+- **A:** evidência forte e completa, inclusive quanto à estabilização;
+- **B:** evidência estrutural de refinamento, mas parcial para convergência;
+- **C:** evidência estrutural de refinamento, mas parcial para convergência;
+- **D:** evidência forte de refinamento progressivo com suficiência humana, embora diferente da estabilização algorítmica de A.
+
+Futuras evidências devem ser avaliadas pelos mesmos cinco critérios antes de aumentar o peso de qualquer subfamília.
+
+A hipótese permanece **não promovida a princípio arquitetural**. O próximo avanço relevante não é simplesmente acumular repetições, mas demonstrar se existe um mecanismo transversal suficientemente comum entre as subfamílias ou se o conceito deve permanecer como uma família superior com subfamílias mecanísticas distintas.
 
 ## 9. Adaptação de saída para audiência/comunicação — categoria latente
 
