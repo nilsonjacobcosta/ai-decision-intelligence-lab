@@ -77,6 +77,58 @@ O modelo não exige que apenas um modo seja utilizado. Em situações complexas,
 
 Um **modo de participação da IA explicitamente adequado ao tipo de decisão e ao contexto**, em vez de aplicar uma única forma de interação independentemente do problema.
 
+## Extensão funcional — transição entre modos decisórios
+
+A evidência da **Aula 6.3** amplia o C3: além de selecionar inicialmente o modo de participação da IA, o modelo pode **conduzir uma transição contextual entre modos decisórios** quando o processo já estiver em andamento.
+
+O caso observado parte de uma decisão previamente estruturada por uma **Matriz de Decisão Multicritério**, representando uma etapa racional/analítica, e conduz o decisor a uma etapa posterior de reflexão sobre experiência, pressões internas e externas, heurísticas e intuição antes da confirmação final. fileciteturn245file0L179-L205
+
+```text
+análise racional / multicritério
+        ↓
+decisão candidata
+        ↓
+C3 — transição de modo
+        ↓
+experiência + heurísticas + intuição
+        ↓
+confirmação ou ajuste pelo decisor
+```
+
+Isso não constitui um novo modelo independente. É uma **extensão do mesmo mecanismo de C3**, porque a função continua sendo determinar/estruturar **como a IA participa do processo decisório conforme o modo decisório e o contexto**.
+
+### Função de roteamento
+
+A nova evidência também reforça a hipótese arquitetural de C3 como possível roteador:
+
+- **seleção/direcionamento:** o processo pode passar do modo racional para o intuitivo/heurístico;
+- **critério identificável:** a transição decorre da natureza da etapa decisória e da necessidade de incorporar experiência, julgamento e heurísticas;
+- **autoridade:** a confirmação ou ajuste permanece sob responsabilidade humana.
+
+A hipótese de C3 como **roteador transversal entre trilhas funcionais** permanece, contudo, em observação. A evidência atual demonstra seleção entre **modos decisórios distintos**, mas ainda não demonstra recorrência suficiente atravessando múltiplas trilhas funcionais do laboratório.
+
+### Relação com C16
+
+C16 continua responsável pela priorização racional mediante critérios explícitos. C3 não absorve essa função.
+
+A composição observada é:
+
+```text
+C16 — avaliação/priorização racional
+        ↓
+C3 — transição de modo
+        ↓
+modo intuitivo/heurístico
+        ↓
+decisão humana
+```
+
+Portanto, trata-se de **handoff entre mecanismos**, não de fusão entre C3 e C16.
+
+### Delimitação em relação ao C12
+
+C12 continua tratando da **validação crítica de uma saída analítica**. A extensão de C3 trata da **mudança de modo decisório** e da forma de participação da IA, tendo a decisão candidata como objeto do processo.
+
 ## Limites
 
 - O modelo não transforma intuição em evidência objetiva.
