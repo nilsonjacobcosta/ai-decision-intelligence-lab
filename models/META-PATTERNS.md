@@ -189,3 +189,62 @@ A formalização de qualquer meta-padrão exige evidência adicional e avaliaç�
 5. utilidade para outras aplicações.
 
 Nenhum registro neste arquivo implica integração automática com o ORCHESTRATOR CORE.
+
+
+---
+
+## 4. Estruturação categorial de saída versus normalização de contexto
+
+**Decisão:** **não contar o Candidato 24 como quarta ocorrência do meta-padrão de normalização de contexto.**
+
+A semelhança superficial existe: tanto o padrão de normalização quanto o 5W2H transformam informação menos estruturada em uma representação organizada por categorias predefinidas.
+
+A diferença funcional, porém, é suficiente para manter as famílias separadas:
+
+- **C6 / C11 / C20 — normalização de contexto:** preparação, organização ou consolidação da **entrada/contexto** antes da operação principal;
+- **C24 — 5W2H:** estruturação da **saída/plano de ação**, depois que uma ação ou oportunidade já foi identificada.
+
+Em termos de fluxo:
+
+```text
+C6 / C11 / C20
+contexto bruto
+    ↓
+normalização da entrada
+    ↓
+operação principal
+
+C24
+ação identificada
+    ↓
+estruturação da saída/plano
+    ↓
+execução
+```
+
+Portanto, a orientação de que uma quarta ocorrência independente do padrão de normalização deve disparar sua reavaliação **permanece válida**. O C24 não satisfaz esse critério porque pertence a outra etapa funcional do processo.
+
+A semelhança sugere, contudo, uma hipótese mais ampla de **transformação categorial de representações**. Ela não será formalizada como meta-padrão neste momento; somente deverá ser considerada se novas ocorrências mostrarem que a mesma operação estrutural aparece de forma independente em diferentes etapas e com utilidade transversal.
+
+---
+
+## 5. Integração de múltiplas fontes como possível fusão de contexto
+
+**Status:** em observação.
+
+Na Aula 4.3, o C24 recebe duas fontes distintas — a solicitação do diretor e a tabela de informações sobre o produto — e as combina para construir o plano de ação.
+
+Esse comportamento **não deve ser automaticamente reduzido ao Candidato 15A**.
+
+- **C15A:** identifica informação necessária ausente e solicita sua complementação ao usuário;
+- **possível fusão de contexto:** recebe múltiplas fontes disponíveis e as integra em uma representação contextual única para permitir a operação seguinte.
+
+A hipótese de mecanismo de fusão de contexto é conceitualmente mais próxima do **C20**, porque envolve preparação/consolidação de contexto, embora ainda não haja evidência suficiente para afirmar que constitui um modelo independente.
+
+Se o padrão reaparecer em outras aulas e trilhas, avaliar especificamente:
+1. se há um processo explícito de integração entre fontes;
+2. se as fontes possuem papéis ou estruturas diferentes;
+3. se a integração produz um contexto intermediário reutilizável;
+4. se o mecanismo é distinto de simples concatenação de informações.
+
+Até nova evidência, permanece como **observação**, sem candidato formal.
