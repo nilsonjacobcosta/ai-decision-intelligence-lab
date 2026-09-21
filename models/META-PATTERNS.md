@@ -767,3 +767,67 @@ Esta hipótese não deve ser confundida com a formalização atual de C3. Para p
 4. ganho arquitetural que justifique um mecanismo transversal próprio.
 
 Até nova evidência, **C3 permanece um modelo local de Decision**, enquanto a possibilidade de atuar como mecanismo de roteamento fica apenas registrada como hipótese de evolução.
+
+## 13. “Filtrar/priorizar ideias” e “sugerir combinações” — fronteira em relação ao C16
+
+**Status:** observação registrada; **não cria novo candidato e não aumenta a contagem de ocorrências do C16.**
+
+O material sobre brainstorming afirma que a IA pode **“organizar e filtrar as ideias geradas”** e também sugerir **“combinações ou priorizações”**. A mesma passagem descreve essas operações como formas de tornar o processo mais ágil e permitir que a equipe se concentre nas ideias mais promissoras. fileciteturn232file0L11-L15
+
+### 13.1 Filtrar/priorizar ideias em relação ao C16
+
+Existe uma semelhança real com o **C16 — Orquestração e priorização de ações**: em ambos os casos há um conjunto de alternativas e a possibilidade de reduzir ou ordenar esse conjunto para apoiar uma decisão.
+
+Entretanto, esta ocorrência **não possui estrutura operacional suficiente para ser contada como ocorrência plena do C16**.
+
+O C16 formalizado exige um mecanismo identificável de priorização, incluindo:
+
+- alternativas/candidatos explícitos;
+- avaliação de impactos;
+- critérios de priorização;
+- framework ou regra de priorização;
+- saída estruturada de ações priorizadas.
+
+No brainstorming, o material apenas afirma que a IA pode **filtrar** e **priorizar** ideias; não especifica critérios, pesos, framework, comparação ou regra de decisão que determine a prioridade. Portanto:
+
+> **decisão:** trata-se de **evidência adicional fraca do princípio geral de priorização aplicado a uma origem diferente (ideias)**, mas **não de uma nova ocorrência contabilizável do C16**.
+
+Isso preserva a distinção entre **semelhança funcional** e **estrutura operacional suficiente**.
+
+Se uma futura ocorrência mostrar, por exemplo, ideias avaliadas explicitamente por impacto, viabilidade, esforço ou outro conjunto de critérios, com regra de ordenação/seleção, ela poderá ser reavaliada como ocorrência independente do C16 em outro contexto de entrada.
+
+### 13.2 “Sugerir combinações de ideias” como operação distinta
+
+A expressão **“sugerir possíveis combinações”** deve ser preservada separadamente de priorização. fileciteturn232file0L13-L15
+
+Priorizar responde essencialmente:
+
+> **“Quais alternativas devem vir antes das outras?”**
+
+Combinar/sintetizar responde a uma pergunta diferente:
+
+> **“Quais elementos de alternativas diferentes podem ser integrados para formar uma nova alternativa?”**
+
+O mecanismo hipotético seria:
+
+```
+ideia A ──┐
+          ├──→ combinação / síntese → nova alternativa
+ideia B ──┘
+```
+
+Isso não é simplesmente ordenar ideias e também não corresponde ao mecanismo do **C25 — Segmentation**, cujo objeto é agrupar entidades por similaridade/padrão.
+
+### Hipótese latente
+
+Registrar **“combinação/síntese de alternativas”** como uma **observação latente, sem candidato formal**.
+
+Para justificar um futuro candidato ou modelo, será necessário observar novamente:
+
+1. múltiplas alternativas de entrada;
+2. operação explícita de combinação, recomposição ou síntese;
+3. produção de uma alternativa nova ou estruturalmente transformada;
+4. regras ou critérios identificáveis para determinar como os elementos são combinados;
+5. independência funcional em relação à simples priorização (C16) e à segmentação/agrupamento (C25).
+
+Até nova evidência, permanece apenas como **semente de mecanismo potencialmente distinto**, sem contagem de recorrência e sem alteração da arquitetura atual.
