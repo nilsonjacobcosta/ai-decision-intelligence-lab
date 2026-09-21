@@ -4,6 +4,24 @@ Registro central de padrões que atravessam mais de uma trilha do laboratório. 
 
 Este arquivo serve para preservar recorrências observadas sem antecipar sua formalização. Uma ocorrência isolada não basta para criar um meta-padrão; a recorrência deve ser acompanhada quanto a independência de contexto, clareza do mecanismo e utilidade transversal.
 
+### Critério explícito de peso da evidência
+
+Para evitar reavaliações casuísticas, o peso de cada ocorrência deve ser classificado por uma régua declarada, baseada no **grau de estrutura operacional que a ocorrência já possuía no momento de sua avaliação**:
+
+- **Evidência forte:** a ocorrência apresentou estrutura operacional suficiente para, isoladamente, **ser considerada candidata à formalização como modelo/candidato**. Isso implica que havia mecanismo identificável, escopo funcional minimamente delimitado e estrutura suficiente para ser registrada como unidade formal de análise, ainda que posteriormente não fosse promovida a princípio arquitetural.
+- **Evidência secundária:** a ocorrência foi observada e possui semelhança estrutural relevante, mas foi **explicitamente descartada como candidato formal na avaliação da época por falta de estrutura operacional suficiente**. Ela pode apoiar a hipótese de recorrência, mas não recebe o mesmo peso de uma ocorrência que atingiu o limiar de candidatura formal.
+
+A classificação é feita **com base no registro histórico da avaliação**, e não pela semelhança percebida retrospectivamente. Assim, uma ocorrência anteriormente descartada por insuficiência estrutural permanece secundária para fins de peso de evidência, salvo se **nova evidência objetiva** alterar o registro sobre sua estrutura operacional.
+
+Em termos de governança:
+
+| Classificação | Limiar histórico | Peso na avaliação de maturação |
+|---|---|---|
+| **Forte** | Estrutura suficiente para ao menos virar candidato formal isolado | Conta como ocorrência plena |
+| **Secundária** | Observada, mas explicitamente descartada como candidato por falta de estrutura suficiente | Conta como evidência de apoio, não como ocorrência plena |
+
+Essa régua deve ser aplicada de forma consistente nas futuras reavaliações de meta-padrões, evitando que o peso de uma ocorrência seja redefinido caso a caso.
+
 ## 1. Escolha de método conforme características do problema
 
 **Status:** **meta-padrão fortalecido — aguardando reforço.**
