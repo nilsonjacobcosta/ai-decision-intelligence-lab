@@ -421,3 +421,80 @@ A evidência necessária para formalização deverá incluir, idealmente:
 4. algum mecanismo de transição ou alimentação entre as duas áreas.
 
 Até lá, permanece como observação e não como candidato formal.
+
+
+---
+
+## 8. Refinamento iterativo até estabilização/convergência
+
+**Status:** **hipótese em observação — ocorrências ainda não contabilizadas.**
+
+A hipótese descreve um ciclo no qual um resultado inicial é avaliado, insuficiências ou ambiguidades são identificadas, o procedimento ou representação é refinado e uma nova execução produz resultado revisado. O ciclo pode repetir-se até algum critério de estabilização, suficiência ou convergência.
+
+```text
+resultado inicial
+      ↓
+avaliação / identificação de insuficiências
+      ↓
+refinamento
+      ↓
+novo resultado
+      ↓
+nova avaliação
+      ↓
+... repetição ...
+      ↓
+estabilização / convergência
+```
+
+**Não contar ocorrências entre si neste estágio.** As quatro categorias devem permanecer separadas até que se demonstre mecanismo comum, critério de parada e independência de contexto.
+
+### Categoria A — Iteração algorítmica interna
+
+**Exemplo observado: C25 / K-means**
+
+Iterações entre atribuição aos clusters e atualização dos centróides até estabilidade segundo o critério algorítmico.
+
+Pergunta estrutural: **o próprio algoritmo possui ciclo explícito de atualização e critério de estabilização?**
+
+### Categoria B — Iteração de análise/engenharia de regras
+
+**Exemplo observado: C23**
+
+A classificação pode revelar ambiguidades, negações, modificadores e casos-limite; regras e referências podem então ser refinadas para nova execução.
+
+Pergunta estrutural: **a avaliação da saída modifica explicitamente o mecanismo usado na próxima execução?**
+
+### Categoria C — Iteração de construção de artefato
+
+**Exemplo observado: enriquecimento iterativo da matriz de decisão**
+
+A matriz inicial pode ser analisada, lacunas identificadas e novas decisões/informações acrescentadas, produzindo uma matriz revisada.
+
+Pergunta estrutural: **o resultado da análise modifica o próprio artefato que será analisado novamente?**
+
+### Categoria D — Iteração decisória/analítica
+
+**Hipótese ainda sem ocorrência formal registrada.**
+
+Refere-se a ciclos em que análise, feedback ou resultado de uma decisão alimentam explicitamente nova análise, revisão de alternativas ou nova decisão.
+
+Pergunta estrutural: **uma etapa posterior retroalimenta explicitamente a análise ou decisão seguinte?**
+
+### Regra de não contagem neste estágio
+
+As categorias A, B, C e D **não devem ser somadas como quatro ocorrências de um único meta-padrão**.
+
+Futuras avaliações deverão examinar:
+
+1. mecanismo explícito de iteração;
+2. objeto modificado a cada ciclo;
+3. feedback que provoca a modificação;
+4. critério de estabilização, suficiência ou parada;
+5. independência de contexto;
+6. utilidade transversal;
+7. relação estrutural entre categorias.
+
+Somente depois será possível decidir se existe um único meta-padrão, subfamílias independentes ou apenas semelhança superficial.
+
+Por enquanto, a hipótese fica **preservada e pendente**, sem promoção a princípio arquitetural e sem contagem de ocorrências.
