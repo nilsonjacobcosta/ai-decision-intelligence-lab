@@ -808,7 +808,7 @@ decisão humana
 
 A relação é importante porque transforma a antiga hipótese abstrata de “possível roteamento” em um mecanismo já observado em operação, ainda que dentro da família Decision.
 
-**Decisão atual:** manter a hipótese de C3 como roteador entre trilhas em observação, registrando **condições 1 e 2 como atendidas pela evidência da Aula 6.3** e preservando 3 e 4 como condições abertas.
+**Decisão atual:** manter a hipótese de C3 como roteador entre trilhas em observação. A Aula 6.3 reforça explicitamente as **condições 1 e 2**: há transição identificável entre modos decisórios distintos e há contexto/critérios identificáveis para essa transição. **A condição 3 não avança com esta evidência**, porque a transição observada permanece dentro da trilha **Decision** e não atravessa trilhas funcionais diferentes. A condição 4 também permanece aberta.
 
 ## 13. “Filtrar/priorizar ideias” e “sugerir combinações” — fronteira em relação ao C16
 
@@ -1027,3 +1027,36 @@ Uma futura evidência deverá ser avaliada quanto a:
 5. retorno ao ciclo operacional.
 
 Se esses elementos reaparecerem com estrutura suficiente, avaliar a formalização da integração **Monitoring → Alert → Action**, sem reclassificar automaticamente o fluxo como refinamento analítico D.
+
+
+## 17. Confirmação humana ambígua antes de agir — observação latente em Interaction
+
+**Status:** **observação latente — sem candidato formal.**
+
+A Aula 6.3 apresenta um caso em que a matriz de decisão deixa **dois cenários empatados em 77%**. A IA pergunta se o decisor está confortável com a escolha de um deles, mas o usuário responde apenas: “Confirmo a decisão 100% e não precisamos de ajustes.” Essa confirmação expressa concordância, mas **não identifica qual dos dois cenários foi escolhido**. A IA prossegue como se a decisão estivesse suficientemente determinada e somente depois o usuário precisa esclarecer explicitamente que o cenário escolhido é o 2.
+
+O padrão latente é **detectar uma confirmação humana semanticamente insuficiente antes de executar a próxima etapa**.
+
+### Delimitação em relação ao C15A e ao C22
+
+- **C15A — Solicitação de informação adicional:** trata de **informação necessária ausente** para completar o contexto;
+- **C22 — Escolha direcional do foco:** trata de uma **escolha direcional ainda não realizada** pelo usuário;
+- **observação atual:** o usuário **já tentou confirmar uma decisão**, mas a confirmação é **ambígua ou insuficientemente específica para identificar a opção confirmada**.
+
+```text
+C15A → falta informação necessária
+C22  → falta escolha direcional
+Latente → existe confirmação, mas ela é ambígua
+```
+
+### Critério para eventual formalização
+
+Se o padrão reaparecer em outros contextos com estrutura operacional suficiente, avaliar a possibilidade de um candidato próprio em **Interaction / Human-in-the-loop**, com elementos como:
+
+1. identificação de uma confirmação ou autorização humana;
+2. detecção explícita de ambiguidade ou insuficiência semântica;
+3. interrupção da progressão antes da execução;
+4. solicitação de esclarecimento específico;
+5. retomada da operação somente após confirmação suficientemente determinada.
+
+Até nova evidência, **não contar ocorrência, não criar candidato e não alterar a arquitetura**. O registro permanece como observação latente para acompanhamento.
