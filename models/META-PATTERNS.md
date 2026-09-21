@@ -276,3 +276,92 @@ Se o padrão reaparecer em outras aulas e trilhas, avaliar especificamente:
 4. se o mecanismo é distinto de simples concatenação de informações.
 
 Até nova evidência, permanece como **observação**, sem candidato formal.
+
+
+---
+
+## 6. Tematização de feedbacks — observação
+
+**Status:** em observação.
+
+O conteúdo sobre análise de sentimentos apresenta uma sequência em que a IA:
+1. classifica sentimentos em textos individuais;
+2. identifica temas recorrentes;
+3. utiliza esses temas para visualizar tendências e apoiar ações.
+
+A hipótese de **tematização** não deve ser confundida com o **Candidato 21 — Investigação em dois níveis**, apesar da semelhança superficial de haver duas camadas.
+
+A diferença é funcional e está no **fluxo da informação**:
+
+### C21 — operação de foco
+
+Parte de uma visão agregada/macro e seleciona **uma variável ou dimensão** para aprofundamento.
+
+```text
+visão macro
+   ↓
+múltiplas dimensões possíveis
+   ↓
+uma dimensão/foco escolhido
+   ↓
+análise aprofundada
+```
+
+É um fluxo de **concentração**: muitos caminhos possíveis → um foco.
+
+### Tematização — operação de agregação
+
+Parte de **muitas classificações ou observações individuais** e procura agrupá-las em poucos temas emergentes.
+
+```text
+muitas observações classificadas
+   ↓
+padrões recorrentes
+   ↓
+poucos temas agregados
+   ↓
+tendências / insights
+```
+
+É um fluxo de **agregação**: muitas observações → poucos agrupamentos.
+
+Portanto, embora ambos possam ser descritos informalmente como uma operação em duas camadas, são mecanismos de informação distintos e, em certo sentido, opostos:
+
+- **C21:** redução do espaço de análise por seleção de foco;
+- **tematização:** redução da multiplicidade de observações por agregação em temas.
+
+Não criar candidato formal neste estágio. Se o padrão reaparecer, avaliar se existe um mecanismo transversal de **agregação temática** suficientemente independente de classificação de sentimentos.
+
+---
+
+## 7. Monitoramento de reputação como possível integração Classification → Monitoring
+
+**Status:** em observação.
+
+O conteúdo apresenta **monitoramento de reputação em tempo real** como uma aplicação da análise de sentimentos. Nesta ocorrência, porém, não há especificação suficiente para concluir que exista uma regra arquitetural de integração entre Classification e Monitoring.
+
+Acompanhar as próximas aulas para verificar se o padrão evolui de uma aplicação isolada para um fluxo contínuo, por exemplo:
+
+```text
+feedbacks contínuos
+      ↓
+Classification
+      ↓
+sentimento / categoria / tema
+      ↓
+Monitoring
+      ↓
+acompanhamento de tendência ou desvio
+      ↓
+ação / alerta
+```
+
+Se essa estrutura reaparecer de forma consistente, avaliar se há uma **regra de integração entre Classification e Monitoring**, análoga em espírito ao handoff **Diagnosis → Action**, em vez de registrar apenas mais uma aplicação da classificação.
+
+A evidência necessária para formalização deverá incluir, idealmente:
+1. recorrência do fluxo em mais de um contexto;
+2. caráter contínuo do acompanhamento;
+3. definição do que é monitorado após a classificação;
+4. algum mecanismo de transição ou alimentação entre as duas áreas.
+
+Até lá, permanece como observação e não como candidato formal.
