@@ -72,6 +72,81 @@ Entregar uma tabela contendo, conforme aplicável:
 
 Uma lista estruturada de ações priorizadas, suficientemente clara para servir de base à etapa seguinte de execução ou detalhamento.
 
+
+
+## Delimitação em relação ao Candidato 26 — Mapeamento de oportunidades
+
+O Candidato 26 **não é uma variação interna do C16**. Os mecanismos são distintos e devem permanecer separados.
+
+### Diferença funcional
+
+**C16 — Orquestração e priorização de ações**
+- recebe ações/candidatos de ação;
+- avalia impactos;
+- aplica um **critério/framework de priorização**;
+- produz uma ordem ou seleção relativa entre alternativas.
+
+Seu mecanismo central é, portanto, **priorização dinâmica**: o resultado depende do conjunto de alternativas, dos critérios e do contexto de decisão.
+
+**C26 — Mapeamento de oportunidades**
+- parte de uma **classificação analítica já estabelecida**;
+- associa cada categoria a uma estratégia/recomendação correspondente;
+- produz oportunidades ou recomendações diferenciadas por categoria.
+
+Seu mecanismo central é **mapeamento categorial fixo categoria → estratégia/recomendação**. Ele não exige comparação relativa entre alternativas nem produz, por si só, uma ordem de prioridade.
+
+### Regra de separação
+
+Não considerar C26 como simples modo de entrada do C16, porque isso apagaria uma diferença funcional relevante:
+
+```
+C26
+classificação analítica
+      ↓
+categoria
+      ↓
+estratégia / oportunidade correspondente
+
+C16
+conjunto de ações candidatas
+      ↓
+avaliação de impactos + critérios
+      ↓
+priorização dinâmica
+```
+
+O fato de uma saída do C26 poder posteriormente entrar no C16 não transforma os dois mecanismos em um único modelo.
+
+### Posição relativa na trilha Action
+
+Quando os três mecanismos forem combinados em um fluxo de oportunidade → ação, a relação preferencial é **sequencial, mas não obrigatória**:
+
+```
+Fonte de oportunidade / classificação
+             ↓
+C26 — mapeamento categoria → estratégia
+             ↓
+candidatos a ação / recomendações
+             ↓
+C16 — avaliação e priorização
+             ↓
+ações priorizadas
+             ↓
+C24 — planejamento operacional 5W2H
+             ↓
+execução / acompanhamento
+```
+
+Entretanto, C16 também pode receber ações provenientes diretamente de um diagnóstico ou de outra fonte, sem passar pelo C26. Da mesma forma, uma classificação pode gerar uma recomendação que não precise de priorização formal antes de ser executada.
+
+Assim, **C26 e C16 não são paralelos como mecanismos equivalentes**, mas também não formam uma cadeia obrigatória. A relação arquitetural é:
+
+- **C26 = geração estruturada de candidatos a partir de categorias/oportunidades**;
+- **C16 = seleção/priorização relativa desses candidatos quando houver necessidade de priorização**;
+- **C24 = transformação da ação selecionada em plano operacional**.
+
+Essa distinção deve ser preservada quando o C26 for formalizado, evitando que o novo modelo seja absorvido pelo C16 apenas por ambos produzirem recomendações.
+
 ## Relação com o Candidato 17
 
 O Candidato 16 deve ser executado **antes** do Candidato 17.
