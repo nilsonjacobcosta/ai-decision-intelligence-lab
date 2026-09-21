@@ -95,10 +95,23 @@ O alerta pode alimentar Action, Diagnosis ou outra etapa, conforme o contexto.
 
 ## Decision
 
-Os componentes atuais relacionados à tomada de decisão estratégica estão organizados fora de `models/decision/`:
+A trilha Decision reúne modelos e componentes destinados a estruturar processos de tomada de decisão e o papel de apoio da IA.
 
+- `models/decision/ai-role-by-decision-type.md` — **Candidato 3**, papel/modo de participação da IA conforme o tipo de decisão e o contexto disponível;
 - `prompts/decision-matrix-enrichment.md` — prompt reutilizável para enriquecimento de matriz de decisão;
 - `templates/decision-matrix.md` — estrutura reutilizável da matriz.
+
+### Candidato 3 — papel da IA conforme o tipo de decisão
+
+**Formalizado em `models/decision/ai-role-by-decision-type.md`.**
+
+O C3 seleciona o modo de participação da IA conforme a natureza da decisão e o contexto disponível: racional (dados/análise/previsão), intuitivo (experiência/julgamento/questionamento) e colaborativo (perspectivas/especialistas/consenso).
+
+A Aula 6.1 forneceu evidência operacional adicional, especialmente ao aplicar intuição e colaboração de forma mais intensa na ausência de dados concretos.
+
+C3 é distinto do meta-padrão **Escolha de método conforme características do problema**: o meta-padrão seleciona técnica/framework analítico; C3 seleciona o papel/modo de participação da IA. Por isso, C3 não é contado como ocorrência desse meta-padrão.
+
+Uma hipótese futura acompanha o C3: ele poderá eventualmente funcionar como mecanismo de roteamento entre trilhas do laboratório. Essa hipótese ainda não está decidida.
 
 ## Diagnosis → Action
 
@@ -213,8 +226,12 @@ A Aula 4.3 também apresenta a combinação de e-mail do gestor e tabela do prod
 **Control**
 - Monitoramento e Action estão formalizados, mas ainda não foi estabelecido um mecanismo de controle suficientemente distinto para justificar uma trilha própria.
 
-**Candidatos 3 e 4**
-- Permanecem como hipóteses reutilizáveis em observação, sem evidência adicional suficiente para formalização.
+**Candidato 4**
+- Permanece como hipótese reutilizável em observação.
+
+**Candidato 3**
+- Formalizado em `models/decision/ai-role-by-decision-type.md`; a Aula 6.1 forneceu evidência adicional estruturada para sua promoção.
+
 
 ### Já formalizados
 
