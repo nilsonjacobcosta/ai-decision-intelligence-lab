@@ -55,7 +55,12 @@ Esses critérios podem ser substituídos ou ampliados conforme o contexto.
 Aplicar um framework explicitamente definido, como:
 
 - Matriz GUT;
-- Esforço × Impacto.
+- Esforço × Impacto;
+- Impacto × Viabilidade.
+
+Esses três frameworks/combinações de critérios já possuem evidência no histórico do laboratório. O C16, porém, **não depende de nenhum framework específico**: o mecanismo central é a avaliação relativa de alternativas por critérios explícitos, seguida de priorização conforme o contexto.
+
+No caso de **Impacto × Viabilidade**, “viabilidade” não é tomada como sinônimo literal de “esforço”. Na Aula 6.2, ela é operacionalizada por aspectos como tempo de implementação e recursos disponíveis. A diferença é de critério contextual, não de mecanismo: continua sendo priorização relativa de alternativas por critérios explícitos.
 
 O mecanismo não deve presumir um critério de priorização quando o contexto exigir outro.
 
@@ -155,6 +160,10 @@ A decomposição hierárquica do Candidato 17 deve ocorrer apenas sobre as açõ
 
 ## Evidência de origem
 
-Na Aula 3.2, o material orienta a IA a propor ações corretivas, analisar seus impactos financeiro, operacional e de marketing e priorizá-las usando Matriz GUT ou Esforço e Impacto. O resultado esperado é uma tabela de ações priorizadas. 
+Na Aula 3.2, o material orienta a IA a propor ações corretivas, analisar seus impactos financeiro, operacional e de marketing e priorizá-las usando Matriz GUT ou Esforço e Impacto. O resultado esperado é uma tabela de ações priorizadas.
 
-Fonte: Aula 3.2 — Sugestão e priorização de ações corretivas.
+**Reforço — Aula 6.2:** no brainstorming colaborativo, as ideias geradas são priorizadas por **impacto e viabilidade**, considerando impacto na expansão internacional e viabilidade em termos de tempo de implementação e recursos disponíveis. Esta ocorrência é classificada como **evidência plena adicional do mecanismo C16**, aplicada a uma origem diferente — ideias de brainstorming em vez de ações derivadas de diagnóstico. Ela não é contada como nova ocorrência do framework específico “Esforço × Impacto”, mas como uma terceira variante contextual de critérios dentro do mesmo mecanismo de priorização.
+
+A distinção é importante: **“filtrar/priorizar ideias”**, quando apenas mencionado sem critérios ou regra operacional, permanece evidência fraca e não contabilizável do C16; já **“impacto × viabilidade”**, na Aula 6.2, possui critérios explícitos de avaliação e, portanto, satisfaz a estrutura central do modelo.
+
+Fonte: Aula 3.2 — Sugestão e priorização de ações corretivas; Aula 6.2 — Estratégias para decisão sem dados — Brainstorming Colaborativo.
