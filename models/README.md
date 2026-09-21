@@ -65,6 +65,11 @@ São mecanismos que podem atravessar várias trilhas funcionais e, portanto, nã
    - `models/investigation/`.
    - Candidato 21 — investigação em dois níveis: visão macro → seleção do foco → análise aprofundada.
 
+5. **Refinamento iterativo — modelo transversal**
+   - família de mecanismos para refinar estados, regras, artefatos ou análises mediante feedback/nova informação, preservando continuidade entre estados;
+   - formalizado em models/iterative-refinement.md;
+   - quatro subfamílias: iteração algorítmica interna, iteração de análise/engenharia de regras, iteração de construção de artefato e iteração decisória/analítica.
+
 4. **Interaction — Interação / Human-in-the-loop**
    - mecanismos de interação em que o usuário fornece informação, direção ou decisão necessária para a continuidade da operação;
    - `models/interaction/`.
@@ -78,7 +83,7 @@ A separação entre trilhas e áreas transversais evita transformar técnicas re
 
 O Candidato 18 trata do monitoramento contínuo e da detecção de desvios.
 
-O Candidato 19 trata da transformação de uma condição monitorada em **alerta preventivo**, com threshold/condição de disparo e ação preventiva associada.
+O Candidato 19 trata da transformação de uma condição monitorada em **alerta preventivo**, com threshold/condição de disparo e ação preventiva associada. O mecanismo de alerta preventivo já está formalizado; permanece separada, em observação, a hipótese arquitetural mais ampla de integração **Monitoring → Alert → Action** como ciclo pós-implementação.
 
 Fluxo conceitual:
 
@@ -223,35 +228,68 @@ Ele é distinto de:
 - **C17:** decomposição hierárquica de ações;
 - **C15A:** solicitação de informação adicional quando o contexto é insuficiente.
 
-A Aula 4.3 também apresenta a combinação de e-mail do gestor e tabela do produto. Essa **integração de múltiplas fontes** permanece em observação como possível mecanismo de fusão de contexto, distinto do C15A e potencialmente relacionado ao C20.
+A Aula 4.3 também apresenta a combinação de e-mail do gestor e tabela do produto. Essa evidência de **integração de múltiplas fontes** foi avaliada e está agora formalmente tratada como manifestação do **C20**, não como candidato próprio. O C20 registra a decisão e preserva a conexão para futuras avaliações.
 
 ## Checkpoint de observações
 
-### Ainda em observação
+### Arquivadas / absorvidas
 
 **15B — taxonomia de categorias de evidência**
-- A presença de diferentes tipos de informação é clara, mas ainda não há recorrência suficiente de uma taxonomia estável e independente de contexto.
+- Arquivada como observação não-promissora: descreve tipos de informação, mas não demonstrou mecanismo operacional reutilizável com recorrência suficiente.
 
 **Reposição automatizada de estoques**
-- O material apresenta a automação da reposição como aplicação de IA, mas ainda não demonstrou um mecanismo suficientemente geral e separado para justificar um modelo próprio.
+- Arquivada como aplicação: o material demonstra automação da reposição, mas não um mecanismo geral suficientemente distinto para justificar modelo próprio.
 
 **Control**
-- Monitoramento e Action estão formalizados, mas ainda não foi estabelecido um mecanismo de controle suficientemente distinto para justificar uma trilha própria.
+- Arquivado como hipótese independente: o material não demonstrou mecanismo suficientemente distinto de Monitoring + Alert + Action para justificar uma trilha própria.
 
-**Candidato 4**
-- Permanece como hipótese reutilizável em observação.
+**Integração de múltiplas fontes**
+- Arquivada como hipótese independente e absorvida no **C20**. A conexão permanece documentada no arquivo do C20 e no histórico de META-PATTERNS.md.
 
-**Candidato 3**
-- Formalizado em `models/decision/ai-role-by-decision-type.md`; a Aula 6.1 forneceu evidência adicional estruturada para sua promoção.
+### Ainda em observação
 
+**Escolha de método conforme características do problema**
+- Meta-padrão fortalecido, aguardando reforço adicional.
+- C13 e C25 são ocorrências fortes; a ocorrência Diagnosis/Action permanece secundária.
+
+**Normalização de contexto antes da operação principal**
+- Três ocorrências nos Candidatos 6, 11 e 20; a segmentação de bases grandes não conta como quarta ocorrência.
+
+**Calibração/restrição proativa via regras explícitas**
+- Duas ocorrências nos Candidatos 9 e 23; o C12 permanece conceitualmente separado como controle reativo.
+
+**What-if / cenários / simulação**
+- Permanece em observação. A Aula 6.1 reforçou o uso estruturado de cenários e riscos, mas ainda não há mecanismo independente suficientemente delimitado para modelo próprio.
+
+**Tematização de feedbacks**
+- Permanece em observação como possível mecanismo transversal de agregação temática.
+
+**Classification → Monitoring**
+- Permanece em observação como possível integração arquitetural; a ocorrência atual ainda é insuficiente para formalizar um handoff próprio.
+
+**Output adaptation / audiência**
+- Permanece em observação; ELI5 constitui uma ocorrência forte, mas ainda não há recorrência independente suficiente.
+
+**Combinação / síntese de alternativas**
+- Permanece em observação; a evidência de “sugerir combinações” ainda não especifica mecanismo suficientemente delimitado.
+
+**Confirmação humana ambígua**
+- Permanece em observação latente em Interaction; a evidência atual ainda não justifica candidato próprio.
+
+**Teste-piloto → Monitoring → Alert → Action**
+- Permanece como hipótese de integração pós-implementação e não é contado como nova ocorrência da família de refinamento iterativo.
 
 ### Já formalizados
 
-- **15A** — solicitação de informação adicional → `models/interaction/`;
-- **19** — alertas preventivos → `models/monitoring/`;
-- **21** — investigação em dois níveis → `models/investigation/`, como área transversal;
-- **22** — escolha direcional do foco pelo usuário → `models/interaction/`;
-- **23** — calibração de classificação por regras explícitas → `models/classification/`.
+- **3** — papel/modo de participação da IA → models/decision/;
+- **15A** — solicitação de informação adicional → models/interaction/;
+- **19** — alertas preventivos → models/monitoring/;
+- **21** — investigação em dois níveis → models/investigation/;
+- **22** — escolha direcional do foco → models/interaction/;
+- **23** — calibração de classificação por regras explícitas → models/classification/;
+- **25** — segmentação por padrões → models/segmentation/;
+- **26** — mapeamento de oportunidades → models/action/;
+- **Refinamento iterativo** — família transversal formalizada → models/iterative-refinement.md.
 
 ## Regra de maturação
 
