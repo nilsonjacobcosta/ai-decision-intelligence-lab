@@ -171,7 +171,7 @@ O Candidato 23 — calibração de classificação por regras explícitas — pe
 
 O Candidato 25 — segmentação por padrões de comportamento — está em `models/segmentation/`.
 
-O C25 distingue segmentação de classificação: classificação atribui categorias controladas; segmentação forma grupos por similaridade, podendo descobrir estruturas emergentes. A escolha entre segmentação por dimensões explícitas e clustering também constitui a terceira ocorrência do meta-padrão de escolha de método conforme as características do problema, agora promovido a princípio arquitetural.
+O C25 distingue segmentação de classificação: classificação atribui categorias controladas; segmentação forma grupos por similaridade, podendo descobrir estruturas emergentes. A escolha entre segmentação por dimensões explícitas e clustering constitui uma ocorrência forte do meta-padrão de escolha de método conforme as características do problema. O padrão, porém, permanece **meta-padrão fortalecido, aguardando reforço**, porque a segunda ocorrência histórica (Diagnosis/Action) foi anteriormente considerada evidência insuficiente para formalização.
 
 O mecanismo utiliza categorias, referências, exemplos e regras explícitas para reduzir ambiguidades antes da classificação, distinguindo-se da validação reativa do Candidato 12.
 
@@ -181,7 +181,7 @@ Os padrões que atravessam múltiplas trilhas são registrados separadamente par
 
 Consulte **[META-PATTERNS.md](META-PATTERNS.md)** para o registro consolidado.
 
-Os meta-padrões em observação permanecem registrados no `META-PATTERNS.md`. O padrão **Escolha de método conforme características do problema** foi promovido a princípio arquitetural após a terceira ocorrência independente, no C25. Permanecem em observação:
+Os meta-padrões em observação permanecem registrados no `META-PATTERNS.md`. O padrão **Escolha de método conforme características do problema** está **fortalecido, mas ainda aguardando reforço**. C13 e C25 constituem ocorrências fortes; a ocorrência Diagnosis/Action permanece como evidência secundária, pois anteriormente foi considerada insuficiente para formalização. Permanecem em observação:
 - **Normalização de contexto antes da operação principal** — três ocorrências, nos Candidatos 6, 11 e 20; a segmentação de bases grandes não conta como quarta ocorrência porque representa particionamento da entrada, não normalização de contexto.
 - **Calibração/restrição proativa via regras explícitas** — duas ocorrências, nos Candidatos 9 e 23; o Candidato 12 representa controle reativo da saída e permanece conceitualmente separado.
 
