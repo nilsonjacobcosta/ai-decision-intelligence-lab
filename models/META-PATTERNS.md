@@ -1,6 +1,6 @@
 # Meta-patterns transversais
 
-Registro central de padrões que atravessam mais de uma trilha do laboratório, mas que ainda **não estão formalizados como princípios arquiteturais**.
+Registro central de padrões que atravessam mais de uma trilha do laboratório. Alguns permanecem em observação; outros são promovidos a princípios arquiteturais quando atingem o critério de maturação.
 
 Este arquivo serve para preservar recorrências observadas sem antecipar sua formalização. Uma ocorrência isolada não basta para criar um meta-padrão; a recorrência deve ser acompanhada quanto a independência de contexto, clareza do mecanismo e utilidade transversal.
 
