@@ -39,6 +39,16 @@ Antes de calcular métricas, verificar:
 - se esses registros representam eventos distintos ou partes do mesmo agregado;
 - qual regra de agregação deve ser aplicada.
 
+## Evidência considerada — integração de múltiplas fontes
+
+O laboratório também registrou evidência de integração de informações provenientes de fontes distintas para formar um contexto mais completo, incluindo a combinação de solicitações/entradas de naturezas diferentes e a orientação de integrar dados de diversas fontes.
+
+Essa evidência é **considerada, mas tratada como manifestação de C20, não como candidato próprio**.
+
+A razão é funcional: a integração de fontes, quando utilizada para preparar, consolidar ou tornar adequada a representação dos dados/contexto antes da operação analítica, está contida no escopo de preparação e qualidade de dados do C20. Não há, no material estudado, mecanismo independente suficientemente delimitado que justifique uma trilha própria.
+
+A conexão deve permanecer explícita para evitar que futuras ocorrências sejam interpretadas como um candidato separado apenas por apresentarem múltiplas fontes. Novas evidências devem ser avaliadas primeiro contra o mecanismo de C20; somente um mecanismo que demonstre função, estrutura e limites próprios poderá justificar reabertura da hipótese de um modelo independente.
+
 ## Relação com previsão
 
 Esta regra pode ser utilizada como etapa de preparação de dados antes de qualquer modelo preditivo, mas **não é exclusiva de forecast**. Por isso, pertence ao domínio de qualidade e preparação de dados.
