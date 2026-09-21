@@ -61,7 +61,26 @@ Uma saída de IA deve poder ser questionada, validada e, quando necessário, rec
 
 Esse princípio é especialmente materializado pelo C12, mas também aparece nos guardrails do C9 e na calibração do C23.
 
-## 5. Não integração automática
+## 5. Seleção contextual do método
+
+O laboratório não assume uma técnica universalmente adequada. A escolha do método deve considerar as características do problema, os dados/contexto disponíveis e o objetivo da operação.
+
+```text
+problema + dados/contexto + objetivo
+            ↓
+     escolha do método
+            ↓
+          aplicação
+```
+
+Este princípio foi promovido após três ocorrências independentes:
+- C13 — seleção da técnica de previsão conforme o contexto;
+- seleção contextual de frameworks em Diagnosis/Action;
+- C25 — escolha entre estratégias de segmentação e clustering.
+
+A escolha concreta continua dependente do contexto e deve ser justificada quando relevante.
+
+## 6. Não integração automática
 
 Nenhum modelo desenvolvido no laboratório implica integração automática com o ORCHESTRATOR CORE.
 
