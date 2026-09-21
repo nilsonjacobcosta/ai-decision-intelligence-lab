@@ -698,8 +698,228 @@ O padrão registrado nas ocorrências de C13 e C25 trata da seleção de um **m�
 
 ```text
 problema
+   ↓
+características relevantes
+   ↓
+método / framework analítico
+   ↓
+aplicação
+   ↓
+resultado
+```
+
+### C3 — escolha do papel/modo de participação da IA
+
+C3 seleciona **como a IA participa do processo decisório**, considerando o tipo de decisão e o contexto disponível:
+
+```text
+tipo / contexto da decisão
+   ↓
+modo de participação da IA
+   ↓
+forma de apoio / interação
+   ↓
+decisão humana
+```
+
+A diferença é suficiente para impedir a contagem automática como ocorrência plena. Fundir os dois agora ampliaria retrospectivamente o conceito de “método” e perderia precisão taxonômica.
+
+### Justificativa de fronteira
+
+A semelhança formal é reconhecida, mas a contagem de uma ocorrência exige equivalência suficiente do **mecanismo e do nível funcional**. Neste caso:
+
+- **C13/C25:** escolha de técnica ou estratégia para executar uma operação;
+- **C3:** escolha do papel/modo de participação da IA no processo.
+
+Portanto, C3 é registrado como **caso de fronteira relacionado**, mas **não aumenta o número de ocorrências** do meta-padrão de seleção contextual do método.
+
+### Hipótese para reavaliação futura
+
+Se futuras evidências mostrarem que o padrão se amplia de “escolha de método” para um mecanismo mais geral de **seleção contextual do modo de operação**, C3 poderá ser reavaliado como evidência de uma família mais ampla.
+
+Essa ampliação **não é adotada agora**. O registro atual preserva a definição mais precisa do meta-padrão e evita inflá-lo retrospectivamente.
+
+## 12. Hipótese de evolução arquitetural do C3 — roteamento entre trilhas
+
+**Status:** **hipótese fortalecida — condições 1 e 2 agora evidenciadas; condições 3 e 4 ainda não demonstradas.**
+
+O C3 foi formalizado inicialmente como modelo da trilha **Decision**, porque sua evidência inicial demonstrava a escolha do papel/modo de participação da IA dentro do processo decisório.
+
+A evidência posterior da Aula 6.3 acrescenta o elemento que faltava: C3 pode atuar não apenas na **seleção inicial de um modo**, mas também na **transição contextual entre modos decisórios**. A decisão inicialmente estruturada por uma matriz multicritério/racional é conduzida para uma etapa intuitiva/heurística antes da confirmação final. fileciteturn245file0L179-L205
+
+Isso reforça diretamente a hipótese de C3 como mecanismo de roteamento.
+
+### Condição 1 — seleção/direcionamento entre trilhas ou modos diferentes
+
+**Agora evidenciada.**
+
+A nova ocorrência demonstra um direcionamento explícito entre dois modos de participação decisória:
+
+```text
+modo racional / analítico
+        ↓
+C3 — transição
+        ↓
+modo intuitivo / heurístico
+```
+
+Portanto, embora a evidência atual ainda esteja concentrada dentro da família funcional de **Decision**, ela demonstra que C3 pode selecionar/direcionar o processo entre **modos decisórios distintos**, e não apenas escolher um modo único no início.
+
+### Condição 2 — critérios explícitos ou identificáveis para o roteamento
+
+**Agora evidenciada.**
+
+O direcionamento não ocorre arbitrariamente. O fluxo parte de uma decisão já estruturada racionalmente por critérios multicritério e, diante da necessidade de incorporar experiência, pressões internas/externas, heurísticas e intuição, conduz o processo para o modo intuitivo/heurístico antes da confirmação humana. fileciteturn245file0L179-L205
+
+Assim, há critérios/contexto identificáveis para a transição:
+
+- natureza da etapa decisória;
+- existência de uma decisão candidata racionalmente estruturada;
+- necessidade de incorporar experiência e julgamento;
+- presença de elementos heurísticos/intuitivos;
+- responsabilidade final do decisor humano.
+
+### O que ainda não está demonstrado
+
+As condições 1 e 2 não equivalem, por si só, à formalização do C3 como **roteador transversal entre trilhas funcionais**.
+
+Ainda faltam evidências mais fortes de:
+
+3. **recorrência do roteamento em mais de um contexto funcional**, especialmente atravessando trilhas distintas como Prediction, Diagnosis, Action ou Monitoring;
+4. **ganho arquitetural específico** que justifique transformar o mecanismo de C3 em uma camada transversal de roteamento, em vez de mantê-lo como extensão da trilha Decision.
+
+Portanto, a nova evidência **fortalece substancialmente a hipótese**, mas não a promove ainda a uma arquitetura transversal formalizada.
+
+### Relação com a extensão do C3
+
+A extensão formalizada na seção 15 deve ser entendida como a **primeira evidência operacional concreta da hipótese de roteamento**:
+
+```text
+C16
+  ↓
+decisão racional candidata
+  ↓
+C3 — roteamento/transição
+  ↓
+modo intuitivo/heurístico
+  ↓
+decisão humana
+```
+
+A relação é importante porque transforma a antiga hipótese abstrata de “possível roteamento” em um mecanismo já observado em operação, ainda que dentro da família Decision.
+
+**Decisão atual:** manter a hipótese de C3 como roteador entre trilhas em observação, registrando **condições 1 e 2 como atendidas pela evidência da Aula 6.3** e preservando 3 e 4 como condições abertas.
+
+## 13. “Filtrar/priorizar ideias” e “sugerir combinações” — fronteira em relação ao C16
+
+**Status:** observação registrada; **não cria novo candidato e não aumenta a contagem de ocorrências do C16.**
+
+O material sobre brainstorming afirma que a IA pode **“organizar e filtrar as ideias geradas”** e também sugerir **“combinações ou priorizações”**. A mesma passagem descreve essas operações como formas de tornar o processo mais ágil e permitir que a equipe se concentre nas ideias mais promissoras. fileciteturn232file0L11-L15
+
+### 13.1 Filtrar/priorizar ideias em relação ao C16
+
+Existe uma semelhança real com o **C16 — Orquestração e priorização de ações**: em ambos os casos há um conjunto de alternativas e a possibilidade de reduzir ou ordenar esse conjunto para apoiar uma decisão.
+
+Entretanto, esta ocorrência **não possui estrutura operacional suficiente para ser contada como ocorrência plena do C16**.
+
+O C16 formalizado exige um mecanismo identificável de priorização, incluindo:
+
+- alternativas/candidatos explícitos;
+- avaliação de impactos;
+- critérios de priorização;
+- framework ou regra de priorização;
+- saída estruturada de ações priorizadas.
+
+No brainstorming, o material apenas afirma que a IA pode **filtrar** e **priorizar** ideias; não especifica critérios, pesos, framework, comparação ou regra de decisão que determine a prioridade. Portanto:
+
+> **decisão:** trata-se de **evidência adicional fraca do princípio geral de priorização aplicado a uma origem diferente (ideias)**, mas **não de uma nova ocorrência contabilizável do C16**.
+
+Isso preserva a distinção entre **semelhança funcional** e **estrutura operacional suficiente**.
+
+Se uma futura ocorrência mostrar, por exemplo, ideias avaliadas explicitamente por impacto, viabilidade, esforço ou outro conjunto de critérios, com regra de ordenação/seleção, ela poderá ser reavaliada como ocorrência independente do C16 em outro contexto de entrada.
+
+### 13.2 “Sugerir combinações de ideias” como operação distinta
+
+A expressão **“sugerir possíveis combinações”** deve ser preservada separadamente de priorização. fileciteturn232file0L13-L15
+
+Priorizar responde essencialmente:
+
+> **“Quais alternativas devem vir antes das outras?”**
+
+Combinar/sintetizar responde a uma pergunta diferente:
+
+> **“Quais elementos de alternativas diferentes podem ser integrados para formar uma nova alternativa?”**
+
+O mecanismo hipotético seria:
+
+```
+ideia A ──┐
+          ├──→ combinação / síntese → nova alternativa
+ideia B ──┘
+```
+
+Isso não é simplesmente ordenar ideias e também não corresponde ao mecanismo do **C25 — Segmentation**, cujo objeto é agrupar entidades por similaridade/padrão.
+
+### Hipótese latente
+
+Registrar **“combinação/síntese de alternativas”** como uma **observação latente, sem candidato formal**.
+
+Para justificar um futuro candidato ou modelo, será necessário observar novamente:
+
+1. múltiplas alternativas de entrada;
+2. operação explícita de combinação, recomposição ou síntese;
+3. produção de uma alternativa nova ou estruturalmente transformada;
+4. regras ou critérios identificáveis para determinar como os elementos são combinados;
+5. independência funcional em relação à simples priorização (C16) e à segmentação/agrupamento (C25).
+
+Até nova evidência, permanece apenas como **semente de mecanismo potencialmente distinto**, sem contagem de recorrência e sem alteração da arquitetura atual.
 
 ---
+
+## 14. C16 — priorização por critérios contextuais: impacto × viabilidade
+
+**Status:** **evidência plena adicional do C16; não cria novo candidato.**
+
+A Aula 6.2 fornece uma manifestação estruturalmente completa do mecanismo de priorização: as ideias geradas no brainstorming são avaliadas por **impacto e viabilidade**, considerando o impacto na expansão internacional e a viabilidade em termos de tempo de implementação e recursos disponíveis. fileciteturn236file0L119-L127
+
+### Reclassificação
+
+Esta ocorrência é distinta da observação anterior de **“filtrar/priorizar ideias”** registrada na seção 13.
+
+- **Filtrar/priorizar ideias:** menção genérica, sem critérios, pesos, framework ou regra operacional suficientemente definidos → **evidência fraca, não contabilizável como ocorrência plena do C16**.
+- **Impacto × Viabilidade:** critérios explicitamente definidos e aplicados para comparar alternativas de ideias → **evidência plena do mecanismo C16**.
+
+### Relação com Esforço × Impacto
+
+“Impacto × Viabilidade” não é considerado literalmente o mesmo framework nominal que “Esforço × Impacto”. Viabilidade é um conceito mais amplo e, nesta aula, é operacionalizada por aspectos como tempo de implementação e recursos disponíveis.
+
+Entretanto, os dois pertencem ao **mesmo mecanismo estrutural**:
+
+```
+conjunto de alternativas
+        ↓
+critérios explícitos
+        ↓
+avaliação relativa
+        ↓
+priorização
+```
+
+Portanto, a nova evidência **não cria uma variante conceitualmente independente do C16**. Ela amplia o conjunto de frameworks/combinações de critérios confirmados pelo laboratório.
+
+### Três variantes confirmadas no C16
+
+O histórico atual passa a registrar três formas já confirmadas de operacionalização do mecanismo:
+
+1. **Matriz GUT**;
+2. **Esforço × Impacto**;
+3. **Impacto × Viabilidade**.
+
+A lista é exemplificativa, não prescritiva. O C16 não depende de nenhum desses frameworks em particular; seu núcleo é a **priorização relativa de alternativas mediante critérios explícitos e contextualizados**.
+
+A aplicação a ideias de brainstorming também amplia a evidência de independência de origem: o mecanismo pode receber candidatos de ação derivados de diagnóstico ou ideias/alternativas geradas colaborativamente, desde que exista estrutura suficiente para avaliação e priorização.
+
+Essa evidência deve ser mantida separada do mecanismo de **refinamento iterativo D**, que ocorre posteriormente quando as ideias selecionadas são ajustadas, e da **Interaction**, que estrutura a participação do decisor/equipe.
 
 ## 15. C3 — transição entre modos de decisão: racional → intuitivo
 
@@ -736,37 +956,15 @@ Assim, o mecanismo novo não é “validação heurística” como uma operaçã
 
 O C12 permanece voltado à **validação crítica de uma saída analítica**. Aqui, o objeto principal da segunda etapa é a **decisão candidata e o modo de participação do decisor**, não apenas a correção ou qualidade do output analítico.
 
-Portanto:
-
-```text
-C12
-saída analítica
-   ↓
-crítica / validação
-   ↓
-recalibração, se necessária
-
-C3 — extensão
-modo racional
-   ↓
-decisão candidata
-   ↓
-modo intuitivo/heurístico
-   ↓
-confirmação ou ajuste humano
-```
-
 ### Relação com C16
 
-O C16 permanece responsável pela **priorização racional por critérios explícitos**. Ele não precisa incorporar heurísticas ou intuição para cumprir sua função.
-
-A extensão do C3 atua **depois ou ao redor da saída de C16**, permitindo que uma decisão inicialmente estruturada racionalmente seja submetida a outro modo decisório antes da confirmação humana.
+O C16 permanece responsável pela **priorização racional por critérios explícitos**. A extensão do C3 atua depois ou ao redor da saída de C16, permitindo que uma decisão inicialmente estruturada racionalmente seja submetida a outro modo decisório antes da confirmação humana.
 
 Portanto, a relação é de **handoff entre mecanismos**, e não de fusão:
 
 **C16 → C3 (transição de modo) → decisão humana**
 
-Isso também reforça a hipótese anterior de evolução arquitetural do C3 como mecanismo de roteamento contextual, mas agora com uma transição concreta entre dois modos de decisão já previstos no modelo.
+Isso constitui a primeira evidência operacional concreta da hipótese registrada na seção 12 sobre evolução do C3 para um mecanismo de roteamento contextual.
 
 ### Decisão de governança
 
@@ -782,7 +980,7 @@ Não é necessário aguardar uma nova ocorrência independente para justificar e
 
 **Status:** **hipótese de integração com Monitoring/Alert/Action — não contar como nova ocorrência da categoria D de refinamento iterativo.**
 
-A sequência observada na Aula 6.3 inclui testes-piloto, acompanhamento do desempenho, ajustes rápidos e introdução gradual de soluções. Essas ações ocorrem **após a escolha de uma estratégia e no contexto de implementação real**, e não como refinamento da análise antes da decisão. 
+A sequência observada na Aula 6.3 inclui testes-piloto, acompanhamento do desempenho, ajustes rápidos e introdução gradual de soluções. Essas ações ocorrem **após a escolha de uma estratégia e no contexto de implementação real**, e não como refinamento da análise antes da decisão.
 
 Portanto, não devem ser adicionadas à categoria **D — Iteração decisória/analítica** da seção 8.
 
@@ -829,4 +1027,3 @@ Uma futura evidência deverá ser avaliada quanto a:
 5. retorno ao ciclo operacional.
 
 Se esses elementos reaparecerem com estrutura suficiente, avaliar a formalização da integração **Monitoring → Alert → Action**, sem reclassificar automaticamente o fluxo como refinamento analítico D.
-
