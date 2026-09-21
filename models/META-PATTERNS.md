@@ -193,38 +193,66 @@ Nenhum registro neste arquivo implica integração automática com o ORCHESTRATO
 
 ---
 
-## 4. Estruturação categorial de saída versus normalização de contexto
+## 4. Transformação categorial de representações — duas subfamílias funcionais
 
 **Decisão:** **não contar o Candidato 24 como quarta ocorrência do meta-padrão de normalização de contexto.**
 
-A semelhança superficial existe: tanto o padrão de normalização quanto o 5W2H transformam informação menos estruturada em uma representação organizada por categorias predefinidas.
+A semelhança estrutural existe: tanto C6/C11/C20 quanto C24 transformam informação menos estruturada em uma representação organizada por categorias predefinidas.
 
-A diferença funcional, porém, é suficiente para manter as famílias separadas:
+A distinção, porém, deve ser feita por **função**, e não pela posição sequencial no fluxo.
 
-- **C6 / C11 / C20 — normalização de contexto:** preparação, organização ou consolidação da **entrada/contexto** antes da operação principal;
-- **C24 — 5W2H:** estruturação da **saída/plano de ação**, depois que uma ação ou oportunidade já foi identificada.
+### Subfamília A — preparação de dados para processamento analítico pela IA
 
-Em termos de fluxo:
+**C6 / C11 / C20**
+
+O mecanismo prepara, organiza, consolida ou normaliza **dados/contexto que serão processados analiticamente pela IA**.
+
+Pergunta funcional:
+
+> **Como transformar os dados/contexto em uma representação adequada para a análise subsequente da IA?**
+
+### Subfamília B — preparação de informação para execução e responsabilização humana
+
+**C24 — 5W2H**
+
+O mecanismo transforma uma ação ou oportunidade em uma representação operacional destinada a **execução humana**, explicitando responsabilidades, cronograma, modo de execução e recursos/custos.
+
+Pergunta funcional:
+
+> **Como transformar uma ação em informação estruturada para orientar execução, responsabilidade e acompanhamento humano?**
+
+A distinção permanece válida mesmo quando uma representação ocupar simultaneamente posições diferentes no fluxo de um sistema. Um artefato pode ser saída de uma etapa e entrada de outra sem que sua função deixe de ser analítica ou operacional.
+
+Em termos funcionais:
 
 ```text
 C6 / C11 / C20
-contexto bruto
-    ↓
-normalização da entrada
-    ↓
-operação principal
+dados / contexto
+      ↓
+preparação para processamento analítico pela IA
+      ↓
+análise
 
 C24
-ação identificada
-    ↓
-estruturação da saída/plano
-    ↓
-execução
+ação / oportunidade
+      ↓
+preparação para execução e responsabilização humana
+      ↓
+implementação / acompanhamento
 ```
 
-Portanto, a orientação de que uma quarta ocorrência independente do padrão de normalização deve disparar sua reavaliação **permanece válida**. O C24 não satisfaz esse critério porque pertence a outra etapa funcional do processo.
+Portanto, o C24 **não é uma quarta ocorrência** do meta-padrão específico de normalização de contexto. O registro de C6/C11/C20 permanece com **três ocorrências**.
 
-A semelhança sugere, contudo, uma hipótese mais ampla de **transformação categorial de representações**. Ela não será formalizada como meta-padrão neste momento; somente deverá ser considerada se novas ocorrências mostrarem que a mesma operação estrutural aparece de forma independente em diferentes etapas e com utilidade transversal.
+### Hipótese ampla: transformação categorial de representações
+
+A semelhança entre as duas subfamílias permanece registrada como uma hipótese mais ampla de **transformação categorial de representações**.
+
+Se essa hipótese amadurecer com novas ocorrências, a expectativa atual é que ela **não permaneça como uma única família indiferenciada**. A tendência é que se divida, pelo menos, nas duas subfamílias funcionais:
+
+1. **preparação para processamento analítico pela IA**;
+2. **preparação para execução e responsabilização humana**.
+
+Essa hipótese ainda não constitui um princípio arquitetural formalizado. Novas ocorrências deverão ser avaliadas pela função desempenhada, e não apenas pela posição que ocupam no fluxo.
 
 ---
 
