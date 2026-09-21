@@ -205,6 +205,10 @@ Validação da saída
 
 Essa combinação é uma hipótese de design, não uma arquitetura formalizada.
 
+## Registro de arquivamento
+
+Algumas observações históricas podem permanecer relevantes para proveniência sem continuar como hipóteses ativas. Quando um mecanismo é absorvido por um modelo existente, a decisão deve ser registrada no modelo receptor e aqui preservada como histórico, evitando dupla contagem arquitetural.
+
 ## Regra de governança
 
 Este arquivo é a fonte de verdade para observação, avaliação e eventual promoção dos meta-padrões. `PRINCIPLES.md` apenas referencia princípios já formalizados, evitando duplicação de conteúdo e risco de desalinhamento.
@@ -285,56 +289,46 @@ Essa hipótese ainda não constitui um princípio arquitetural formalizado. Nova
 
 ---
 
-## 5. Integração de múltiplas fontes como possível fusão de contexto
+## 5. Integração de múltiplas fontes — hipótese independente arquivada
 
-**Status:** em observação — **2 ocorrências registradas**.
+**Status:** **arquivada como hipótese independente; evidência absorvida formalmente no C20.**
 
-O padrão descreve situações em que informações provenientes de **fontes distintas** são combinadas para formar um contexto mais completo ou uma representação intermediária para a operação seguinte.
+O laboratório registrou evidência de combinação de informações provenientes de fontes distintas para formar um contexto mais completo ou uma representação intermediária.
 
-### Placar de recorrência
+Essa evidência permanece preservada por proveniência, mas a hipótese de uma arquitetura própria de **“integração de múltiplas fontes”** não será mantida como mecanismo transversal independente.
 
-| # | Ocorrência | Contexto | Peso atual |
+### Evidência histórica
+
+| # | Ocorrência | Contexto | Peso histórico |
 |---|---|---|---|
 | **1** | C24 — Aula 4.3 | e-mail/solicitação do diretor + tabela de informações do produto | **Secundária / observacional** |
-| **2** | Big Data e compras — Aula 5.2 | integração/coleta de informações provenientes de diversas fontes para estruturação dos dados | **Secundária / observacional** |
+| **2** | Big Data e compras — Aula 5.2 | integração/coleta de informações provenientes de diversas fontes | **Secundária / observacional** |
 
-### Ocorrência 1 — C24
+As duas ocorrências foram historicamente classificadas como secundárias porque não apresentavam, isoladamente, especificação operacional suficiente para um candidato formal.
 
-Na Aula 4.3, o C24 utiliza duas fontes distintas — a solicitação do diretor e a tabela de informações sobre o produto — e as combina para construir o plano de ação.
+### Decisão de arquitetura
 
-Essa ocorrência foi registrada anteriormente como possível mecanismo de fusão de contexto.
+A evidência é agora tratada como manifestação do **C20 — preparação/qualidade de dados e contexto**, e não como candidato próprio.
 
-### Ocorrência 2 — Big Data e compras
+O C20 registra explicitamente esta decisão em seu arquivo:
 
-O material sobre Big Data e compras apresenta a **integração de dados provenientes de diversas fontes** como prática para estruturar as informações, eliminar redundâncias e melhorar a eficiência operacional.
+> **“Evidência considerada, mas tratada como manifestação de C20, não candidato próprio.”**
 
-A ocorrência reforça a hipótese de que a integração de múltiplas fontes pode constituir um mecanismo transversal de preparação/consolidação de contexto.
+A conexão é preservada para que futuras ocorrências de múltiplas fontes sejam avaliadas primeiro contra o mecanismo já formalizado de C20.
 
-Entretanto, o texto não apresenta uma especificação operacional suficientemente detalhada para promovê-la a candidato formal. Por isso, seu peso permanece **secundário/observacional** conforme a régua de evidência deste arquivo.
+### Delimitação
 
-### Distinção em relação ao Candidato 15A
+- **C20:** prepara, consolida ou qualifica dados/contexto para a operação analítica;
+- **hipótese arquivada:** descrevia a integração de múltiplas fontes como mecanismo transversal independente.
 
-- **C15A:** identifica informação necessária ausente e solicita sua complementação ao usuário;
-- **fusão de contexto:** recebe múltiplas fontes disponíveis e as integra em uma representação contextual única para permitir a operação seguinte.
+A semelhança não é suficiente para justificar dois modelos separados quando a função observada já está coberta por C20.
 
-### Relação com C20
+### Regra futura
 
-A hipótese de mecanismo de fusão de contexto é conceitualmente próxima do **C20**, porque envolve preparação/consolidação de contexto, embora ainda não haja evidência suficiente para afirmar que constitui um modelo independente.
+Uma nova evidência só justificará a reabertura desta hipótese se demonstrar **função, estrutura e limites próprios** que não sejam adequadamente explicados pelo C20.
 
-### Critério para evolução
+Até lá, não contar novas ocorrências como recorrência de um candidato independente e não criar modelo próprio.
 
-Com **duas ocorrências registradas**, o padrão permanece em observação. Uma nova ocorrência deve ser avaliada quanto a:
-
-1. processo explícito de integração entre fontes;
-2. fontes com papéis ou estruturas diferentes;
-3. produção de contexto intermediário reutilizável;
-4. mecanismo distinto de simples concatenação;
-5. independência de contexto suficiente para justificar um modelo transversal.
-
-Até nova evidência, permanece como **observação, sem candidato formal**.
-
-
----
 
 ## 6. Tematização de feedbacks — observação
 
@@ -427,140 +421,40 @@ Até lá, permanece como observação e não como candidato formal.
 
 ## 8. Refinamento iterativo até estabilização/convergência
 
-**Status:** **hipótese em observação — histórico acumulado com subfamílias mecanísticas distintas.**
+**Status:** **modelo transversal formalizado em arquivo dedicado.**
 
-A hipótese descreve um ciclo no qual um estado, artefato, regra ou análise inicial é avaliado, recebe feedback ou nova informação, é modificado e produz um novo estado. O padrão só deve ser tratado como **refinamento iterativo em sentido forte** quando houver evidência suficiente de progressão do estado anterior e alguma noção de suficiência, estabilização ou convergência.
+A hipótese amadureceu até o ponto em que uma simples entrada no registro de meta-padrões deixou de ser estruturalmente suficiente. O padrão possui quatro subfamílias mecanísticas distintas, com critérios de estabilização/convergência diferentes:
 
-### Cinco critérios operacionais
+1. **A — Iteração algorítmica interna**;
+2. **B — Iteração de análise/engenharia de regras**;
+3. **C — Iteração de construção de artefato**;
+4. **D — Iteração decisória/analítica**.
 
-A régua específica desta hipótese passa a ser aplicada retroativamente a todas as subfamílias já observadas:
+A formalização preserva essas diferenças e não trata as quatro categorias como quatro ocorrências equivalentes.
 
-1. **Estado inicial identificável** — existe um resultado, artefato, regra, modelo ou análise inicial que serve de ponto de partida.
-2. **Feedback ou nova informação** — existe avaliação, erro, lacuna, resposta, observação ou informação adicional que desencadeia a próxima transformação.
-3. **Objeto modificado identificável** — é possível apontar o que efetivamente muda entre os ciclos.
-4. **Continuidade entre estados** — o novo estado preserva ou incorpora parte relevante do estado anterior, em vez de ser apenas uma execução independente ou uma nova geração sem relação estrutural.
-5. **Noção de estabilização, suficiência ou convergência** — existe algum critério explícito ou suficientemente identificável que indique quando o processo pode parar, estabilizar ou ser considerado adequado.
+### Modelo dedicado
 
-O quinto critério é deliberadamente mais exigente. **Repetir, reexecutar ou enriquecer um artefato não basta para caracterizar convergência.** Quando não houver qualquer noção de suficiência, estabilização ou parada, a evidência pode continuar sendo relevante para uma hipótese mais ampla de refinamento, mas deve ser marcada como **parcial/fraca** para a subfamília de refinamento até estabilização/convergência.
+A definição operacional, os cinco critérios, a proveniência, os limites e as regras de reutilização estão em:
 
-### Aplicação retroativa às subfamílias
+**[models/iterative-refinement.md](iterative-refinement.md)**
 
-| Categoria | Evidência | Critérios 1–4 | Critério 5 — estabilização/suficiência/convergência | Peso atual |
-|---|---|---|---|---|
-| **A — Iteração algorítmica interna** | C25 / K-means | Satisfeitos | **Satisfeito de forma explícita:** iterações até estabilidade segundo o critério algorítmico | **Forte** |
-| **B — Iteração de análise/engenharia de regras** | C23 | Satisfeitos | **Não demonstrado de forma suficiente:** há recalibração quando os resultados não estão adequados, mas não há critério explícito de estabilização/convergência | **Parcial/fraca para convergência** |
-| **C — Iteração de construção de artefato** | enriquecimento iterativo da matriz de decisão | Satisfeitos | **Não demonstrado:** há enriquecimento sucessivo, mas o material não estabelece condição de suficiência, estabilidade ou parada | **Parcial/fraca para convergência** |
-| **D — Iteração decisória/analítica** | SWOT — ajuste/refinamento | Satisfeitos | **Satisfeito em sentido de suficiência:** o processo prevê ajustes sucessivos e encerramento quando o decisor se sente confortável com a análise; não equivale, porém, à convergência matemática de A | **Forte, com ressalva** |
+### Decisão de governança
 
-### Categoria A — Iteração algorítmica interna
+O refinamento iterativo **não é promovido a Candidato 27**. Ele é tratado como uma **família transversal de mecanismos**, porque o mesmo princípio estrutural atravessa diferentes trilhas e objetos, enquanto o mecanismo de estabilização depende da subfamília.
 
-**Exemplo: C25 / K-means**
+A classificação histórica permanece:
 
-O mecanismo possui ciclos explícitos de atribuição aos clusters e atualização dos centróides, prosseguindo até estabilidade segundo o critério algorítmico.
+- **A — C25 / K-means:** evidência forte e completa quanto à estabilização algorítmica;
+- **B — C23:** evidência estrutural de refinamento, mas parcial para convergência;
+- **C — matriz de decisão:** evidência estrutural de refinamento de artefato, mas parcial para convergência;
+- **D — SWOT:** evidência forte de refinamento progressivo com suficiência humana/pragmática.
 
-Pergunta estrutural:
+### Relação com o registro de meta-padrões
 
-> **O próprio algoritmo possui ciclo explícito de atualização e critério de estabilização?**
+O arquivo de meta-padrões continua sendo a fonte de verdade para a **evolução e governança dos padrões transversais**. O arquivo dedicado passa a ser a fonte operacional do modelo formalizado.
 
-Esta é a manifestação mais forte da hipótese porque o quinto critério é parte constitutiva do mecanismo.
+O teste-piloto → monitoramento → alerta → ação permanece separado e não deve ser reclassificado como nova ocorrência da subfamília D.
 
-### Categoria B — Iteração de análise/engenharia de regras
-
-**Exemplo: C23**
-
-A classificação pode revelar ambiguidades, negações, modificadores e casos-limite; referências e regras podem então ser refinadas para uma nova execução.
-
-Os critérios 1–4 são atendidos:
-
-- há uma classificação inicial;
-- os resultados funcionam como feedback;
-- regras/referências são o objeto modificado;
-- a nova calibração preserva a estrutura anterior e acrescenta ou ajusta regras.
-
-Entretanto, **o critério 5 não está demonstrado com o mesmo rigor de A**. O C23 registra ajuste quando o resultado não está suficientemente calibrado, mas não estabelece um critério operacional de estabilização ou uma condição clara de parada.
-
-Portanto, B permanece evidência válida da hipótese mais ampla de **refinamento de análise/regras**, mas é **evidência parcial/fraca especificamente para “refinamento até estabilização/convergência”**.
-
-### Categoria C — Iteração de construção de artefato
-
-**Exemplo: enriquecimento iterativo da matriz de decisão**
-
-A matriz inicial pode ser analisada, lacunas identificadas e novas decisões/informações acrescentadas, produzindo uma matriz revisada. O material também descreve a possibilidade de enriquecimento iterativo.
-
-Os critérios 1–4 são atendidos:
-
-- existe matriz inicial;
-- a análise identifica lacunas ou novas necessidades;
-- o próprio artefato é modificado;
-- a versão seguinte incorpora a anterior em vez de substituí-la por um artefato sem relação.
-
-Contudo, **o critério 5 também não está demonstrado**. O material não define quando a matriz estará suficientemente completa, estável ou adequada para encerrar o enriquecimento.
-
-Assim, C deve ser preservada como **evidência parcial/fraca para convergência**, embora seja uma evidência relevante e estrutural para a hipótese mais ampla de **refinamento iterativo de artefatos**.
-
-### Categoria D — Iteração decisória/analítica
-
-**Exemplo atual: SWOT — ajuste/refinamento**
-
-A SWOT apresenta uma manifestação diferente das categorias A–C: o objeto é uma análise construída em interação com o decisor.
-
-A sequência observada é:
-
-```
-SWOT inicial
-      ↓
-perguntas / feedback do decisor
-      ↓
-ajustes finos
-      ↓
-análise revisada
-      ↓
-nova avaliação
-      ↓
-suficiência para o decisor
-```
-
-Os critérios 1–4 estão presentes. O quinto critério também possui evidência suficiente **em sentido de suficiência prática**, porque o processo é encerrado quando o decisor se sente confortável com a análise.
-
-Isso deve ser distinguido de A:
-
-- **A:** estabilidade definida pelo próprio mecanismo algorítmico;
-- **D:** suficiência definida pelo processo humano de revisão.
-
-Portanto, D é considerada **evidência forte da hipótese transversal**, mas com ressalva: sua noção de estabilização é humana/pragmática, não matemática ou algorítmica.
-
-### Distinção dentro da Aula 6 — “ajustar/refinar” versus “refazer o processo”
-
-A Aula 6 contém duas manifestações que não devem ser contabilizadas como equivalentes.
-
-#### SWOT — “ajustar/refinar”
-
-A SWOT solicita perguntas adicionais para **ajustes finos** e refinamento da análise. Trata-se de modificação incremental do estado anterior.
-
-Por isso, é a evidência da Aula 6 que efetivamente reforça a hipótese de **refinamento progressivo**.
-
-#### Decisão intuitiva — “refazer o processo”
-
-No Prompt 3, após receber as respostas do decisor, a instrução é **“refaça o processo”**. O mecanismo demonstra reprocessamento condicionado por novo contexto humano, mas não demonstra, por si só, que o novo resultado preserve e refine incrementalmente o anterior nem que exista um critério de estabilização.
-
-A manifestação intuitiva é, portanto, registrada como **evidência relacionada de reprocessamento contextual**, não como ocorrência adicional de convergência.
-
-Essa distinção é importante para evitar que qualquer segunda execução de um prompt seja artificialmente classificada como iteração.
-
-### Regra de contagem e evolução
-
-As categorias A, B, C e D **não são somadas mecanicamente como quatro ocorrências equivalentes**.
-
-O histórico atual deve ser interpretado assim:
-
-- **A:** evidência forte e completa, inclusive quanto à estabilização;
-- **B:** evidência estrutural de refinamento, mas parcial para convergência;
-- **C:** evidência estrutural de refinamento, mas parcial para convergência;
-- **D:** evidência forte de refinamento progressivo com suficiência humana, embora diferente da estabilização algorítmica de A.
-
-Futuras evidências devem ser avaliadas pelos mesmos cinco critérios antes de aumentar o peso de qualquer subfamília.
-
-A hipótese permanece **não promovida a princípio arquitetural**. O próximo avanço relevante não é simplesmente acumular repetições, mas demonstrar se existe um mecanismo transversal suficientemente comum entre as subfamílias ou se o conceito deve permanecer como uma família superior com subfamílias mecanísticas distintas.
 
 ## 9. Adaptação de saída para audiência/comunicação — categoria latente
 
