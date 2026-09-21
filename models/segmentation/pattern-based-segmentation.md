@@ -64,7 +64,7 @@ A Aula 5.1 apresenta mais de uma estratégia de segmentação:
 
 A escolha entre essas abordagens depende do objetivo da análise, das variáveis disponíveis e do tipo de estrutura que se pretende identificar.
 
-Isso constitui a terceira ocorrência independente do meta-padrão, junto ao Candidato 13 e à seleção contextual de frameworks em Diagnosis/Action.
+Isso constitui uma ocorrência forte do meta-padrão, junto ao Candidato 13. A seleção contextual de frameworks em Diagnosis/Action permanece registrada como evidência secundária, pois anteriormente foi considerada insuficiente para formalização.
 
 ## Evidência de origem
 
