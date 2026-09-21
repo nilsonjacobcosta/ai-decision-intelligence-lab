@@ -16,6 +16,9 @@ Nada aqui é considerado parte do ORCHESTRATOR CORE automaticamente. Um componen
 
 ## Princípios
 
+Os princípios de governança do laboratório estão consolidados em [`PRINCIPLES.md`](PRINCIPLES.md).
+
+- **IA apoia, não decide** — a IA amplia análise e estruturação, enquanto a responsabilidade pela decisão permanece humana.
 - Preservar a origem e o contexto de cada método.
 - Separar conteúdo estudado de interpretação e adaptação.
 - Não transformar um conceito em framework permanente antes de validá-lo.
@@ -26,7 +29,7 @@ Nada aqui é considerado parte do ORCHESTRATOR CORE automaticamente. Um componen
 
 ## Estrutura atual
 
-A estrutura abaixo reflete as pastas existentes no repositório. Em `models/`, seis áreas são tratadas como **trilhas funcionais** e quatro como **áreas transversais**.
+A estrutura abaixo reflete as pastas existentes no repositório. Em `models/`, sete áreas são tratadas como **trilhas funcionais** e quatro como **áreas transversais**.
 
 ```text
 ai-decision-intelligence-lab/
@@ -70,6 +73,7 @@ ai-decision-intelligence-lab/
 - **Action** — ação.
 - **Monitoring** — monitoramento.
 - **Classification** — classificação.
+- **Segmentation** — segmentação por padrões de similaridade.
 
 ### Áreas transversais
 
