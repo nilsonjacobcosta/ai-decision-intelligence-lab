@@ -831,3 +831,51 @@ Para justificar um futuro candidato ou modelo, será necessário observar novame
 5. independência funcional em relação à simples priorização (C16) e à segmentação/agrupamento (C25).
 
 Até nova evidência, permanece apenas como **semente de mecanismo potencialmente distinto**, sem contagem de recorrência e sem alteração da arquitetura atual.
+
+---
+
+## 14. C16 — priorização por critérios contextuais: impacto × viabilidade
+
+**Status:** **evidência plena adicional do C16; não cria novo candidato.**
+
+A Aula 6.2 fornece uma manifestação estruturalmente completa do mecanismo de priorização: as ideias geradas no brainstorming são avaliadas por **impacto e viabilidade**, considerando o impacto na expansão internacional e a viabilidade em termos de tempo de implementação e recursos disponíveis. fileciteturn236file0L119-L127
+
+### Reclassificação
+
+Esta ocorrência é distinta da observação anterior de **“filtrar/priorizar ideias”** registrada na seção 13.
+
+- **Filtrar/priorizar ideias:** menção genérica, sem critérios, pesos, framework ou regra operacional suficientemente definidos → **evidência fraca, não contabilizável como ocorrência plena do C16**.
+- **Impacto × Viabilidade:** critérios explicitamente definidos e aplicados para comparar alternativas de ideias → **evidência plena do mecanismo C16**.
+
+### Relação com Esforço × Impacto
+
+“Impacto × Viabilidade” não é considerado literalmente o mesmo framework nominal que “Esforço × Impacto”. Viabilidade é um conceito mais amplo e, nesta aula, é operacionalizada por aspectos como tempo de implementação e recursos disponíveis.
+
+Entretanto, os dois pertencem ao **mesmo mecanismo estrutural**:
+
+```
+conjunto de alternativas
+        ↓
+critérios explícitos
+        ↓
+avaliação relativa
+        ↓
+priorização
+```
+
+Portanto, a nova evidência **não cria uma variante conceitualmente independente do C16**. Ela amplia o conjunto de frameworks/combinações de critérios confirmados pelo laboratório.
+
+### Três variantes confirmadas no C16
+
+O histórico atual passa a registrar três formas já confirmadas de operacionalização do mecanismo:
+
+1. **Matriz GUT**;
+2. **Esforço × Impacto**;
+3. **Impacto × Viabilidade**.
+
+A lista é exemplificativa, não prescritiva. O C16 não depende de nenhum desses frameworks em particular; seu núcleo é a **priorização relativa de alternativas mediante critérios explícitos e contextualizados**.
+
+A aplicação a ideias de brainstorming também amplia a evidência de independência de origem: o mecanismo pode receber candidatos de ação derivados de diagnóstico ou ideias/alternativas geradas colaborativamente, desde que exista estrutura suficiente para avaliação e priorização.
+
+Essa evidência deve ser mantida separada do mecanismo de **refinamento iterativo D**, que ocorre posteriormente quando as ideias selecionadas são ajustadas, e da **Interaction**, que estrutura a participação do decisor/equipe.
+
