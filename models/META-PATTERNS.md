@@ -287,24 +287,51 @@ Essa hipótese ainda não constitui um princípio arquitetural formalizado. Nova
 
 ## 5. Integração de múltiplas fontes como possível fusão de contexto
 
-**Status:** em observação.
+**Status:** em observação — **2 ocorrências registradas**.
 
-Na Aula 4.3, o C24 recebe duas fontes distintas — a solicitação do diretor e a tabela de informações sobre o produto — e as combina para construir o plano de ação.
+O padrão descreve situações em que informações provenientes de **fontes distintas** são combinadas para formar um contexto mais completo ou uma representação intermediária para a operação seguinte.
 
-Esse comportamento **não deve ser automaticamente reduzido ao Candidato 15A**.
+### Placar de recorrência
+
+| # | Ocorrência | Contexto | Peso atual |
+|---|---|---|---|
+| **1** | C24 — Aula 4.3 | e-mail/solicitação do diretor + tabela de informações do produto | **Secundária / observacional** |
+| **2** | Big Data e compras — Aula 5.2 | integração/coleta de informações provenientes de diversas fontes para estruturação dos dados | **Secundária / observacional** |
+
+### Ocorrência 1 — C24
+
+Na Aula 4.3, o C24 utiliza duas fontes distintas — a solicitação do diretor e a tabela de informações sobre o produto — e as combina para construir o plano de ação.
+
+Essa ocorrência foi registrada anteriormente como possível mecanismo de fusão de contexto.
+
+### Ocorrência 2 — Big Data e compras
+
+O material sobre Big Data e compras apresenta a **integração de dados provenientes de diversas fontes** como prática para estruturar as informações, eliminar redundâncias e melhorar a eficiência operacional.
+
+A ocorrência reforça a hipótese de que a integração de múltiplas fontes pode constituir um mecanismo transversal de preparação/consolidação de contexto.
+
+Entretanto, o texto não apresenta uma especificação operacional suficientemente detalhada para promovê-la a candidato formal. Por isso, seu peso permanece **secundário/observacional** conforme a régua de evidência deste arquivo.
+
+### Distinção em relação ao Candidato 15A
 
 - **C15A:** identifica informação necessária ausente e solicita sua complementação ao usuário;
-- **possível fusão de contexto:** recebe múltiplas fontes disponíveis e as integra em uma representação contextual única para permitir a operação seguinte.
+- **fusão de contexto:** recebe múltiplas fontes disponíveis e as integra em uma representação contextual única para permitir a operação seguinte.
 
-A hipótese de mecanismo de fusão de contexto é conceitualmente mais próxima do **C20**, porque envolve preparação/consolidação de contexto, embora ainda não haja evidência suficiente para afirmar que constitui um modelo independente.
+### Relação com C20
 
-Se o padrão reaparecer em outras aulas e trilhas, avaliar especificamente:
-1. se há um processo explícito de integração entre fontes;
-2. se as fontes possuem papéis ou estruturas diferentes;
-3. se a integração produz um contexto intermediário reutilizável;
-4. se o mecanismo é distinto de simples concatenação de informações.
+A hipótese de mecanismo de fusão de contexto é conceitualmente próxima do **C20**, porque envolve preparação/consolidação de contexto, embora ainda não haja evidência suficiente para afirmar que constitui um modelo independente.
 
-Até nova evidência, permanece como **observação**, sem candidato formal.
+### Critério para evolução
+
+Com **duas ocorrências registradas**, o padrão permanece em observação. Uma nova ocorrência deve ser avaliada quanto a:
+
+1. processo explícito de integração entre fontes;
+2. fontes com papéis ou estruturas diferentes;
+3. produção de contexto intermediário reutilizável;
+4. mecanismo distinto de simples concatenação;
+5. independência de contexto suficiente para justificar um modelo transversal.
+
+Até nova evidência, permanece como **observação, sem candidato formal**.
 
 
 ---
