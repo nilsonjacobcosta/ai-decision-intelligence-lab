@@ -583,6 +583,26 @@ O histórico deve permanecer **unificado**, para evitar transformar o refinament
 
 A expressão “análise estruturada de decisão por cenários e riscos” será utilizada como descrição da **forma mais madura atualmente observada** da linhagem, e não como nome de um novo candidato.
 
+### Evidência diferenciadora — cenários compostos
+
+A instrução da Aula 6.1 para **“construir o cenário considerando as duas decisões em conjunto”** constitui a primeira evidência observada de uma propriedade que pode diferenciar estruturalmente esta linhagem de mecanismos já registrados em **C21 — Investigação em dois níveis** e nos mecanismos de preparação/foco associados a **C6/C7**.
+
+O ponto distintivo não é simplesmente aprofundar uma dimensão, mudar o foco ou investigar progressivamente o mesmo objeto. Trata-se de uma **combinação relacional entre unidades de decisão distintas**, produzindo cenários que representam configurações conjuntas das decisões.
+
+```text
+Decisão A ──┐
+            ├──→ configuração/cenário composto
+Decisão B ──┘
+```
+
+Em termos de delimitação:
+
+- **C21** organiza o aprofundamento da investigação sobre um foco, não a combinação estrutural de múltiplas unidades de decisão em um espaço de cenários;
+- **C6/C7** tratam de preparação, organização ou foco do contexto para a operação, não da composição relacional entre decisões independentes ou relacionadas;
+- **What-if/Cenários** pode, portanto, evoluir para uma operação própria de exploração de **configurações combinadas de decisão**, caso novas evidências demonstrem recorrência e estrutura reutilizável.
+
+Esta é a **primeira evidência diferenciadora registrada**, mas não constitui ainda, isoladamente, formalização da linhagem. Ela fica marcada como fundamento para uma futura demonstração de não-redundância.
+
 ### Critérios para eventual formalização da linhagem
 
 A hipótese poderá cruzar o limiar quando houver evidência suficiente de um mecanismo reutilizável que inclua, de forma consistente, elementos como:
