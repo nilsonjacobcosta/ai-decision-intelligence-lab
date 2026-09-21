@@ -44,6 +44,10 @@ São trilhas cujo objeto principal corresponde a uma classe funcional de decisã
    - foco: atribuir categorias de forma controlada, com referências e mecanismos de calibração;
    - `models/classification/`.
 
+7. **Segmentation — Segmentação**
+   - foco: agrupar entidades segundo características ou padrões de similaridade, podendo utilizar dimensões explícitas ou clustering;
+   - `models/segmentation/`.
+
 ### Áreas transversais
 
 São mecanismos que podem atravessar várias trilhas funcionais e, portanto, não devem ser tratados como domínios de negócio independentes.
@@ -163,6 +167,12 @@ Eles podem ser usados em conjunto e atravessar diferentes trilhas.
 
 O Candidato 23 — calibração de classificação por regras explícitas — permanece em `models/classification/`.
 
+## Segmentation
+
+O Candidato 25 — segmentação por padrões de comportamento — está em `models/segmentation/`.
+
+O C25 distingue segmentação de classificação: classificação atribui categorias controladas; segmentação forma grupos por similaridade, podendo descobrir estruturas emergentes. A escolha entre segmentação por dimensões explícitas e clustering também constitui a terceira ocorrência do meta-padrão de escolha de método conforme as características do problema, agora promovido a princípio arquitetural.
+
 O mecanismo utiliza categorias, referências, exemplos e regras explícitas para reduzir ambiguidades antes da classificação, distinguindo-se da validação reativa do Candidato 12.
 
 ## Meta-padrões transversais
@@ -171,8 +181,7 @@ Os padrões que atravessam múltiplas trilhas são registrados separadamente par
 
 Consulte **[META-PATTERNS.md](META-PATTERNS.md)** para o registro consolidado.
 
-No estado atual, estão em observação três padrões:
-- **Escolha de método conforme características do problema** — duas ocorrências, incluindo o Candidato 13 e a seleção contextual de frameworks em Diagnosis/Action.
+Os meta-padrões em observação permanecem registrados no `META-PATTERNS.md`. O padrão **Escolha de método conforme características do problema** foi promovido a princípio arquitetural após a terceira ocorrência independente, no C25. Permanecem em observação:
 - **Normalização de contexto antes da operação principal** — três ocorrências, nos Candidatos 6, 11 e 20; a segmentação de bases grandes não conta como quarta ocorrência porque representa particionamento da entrada, não normalização de contexto.
 - **Calibração/restrição proativa via regras explícitas** — duas ocorrências, nos Candidatos 9 e 23; o Candidato 12 representa controle reativo da saída e permanece conceitualmente separado.
 
@@ -227,3 +236,5 @@ O laboratório prioriza:
 5. utilidade para outras aplicações.
 
 Nenhum modelo ou área neste laboratório implica integração automática com o ORCHESTRATOR CORE.
+
+Para os princípios de governança do laboratório, consulte [`PRINCIPLES.md`](../PRINCIPLES.md).
