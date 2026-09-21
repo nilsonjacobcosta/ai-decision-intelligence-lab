@@ -178,6 +178,19 @@ No estado atual, estão em observação três padrões:
 
 Esses registros são observações de design e **não constituem princípios arquiteturais formalizados**.
 
+## Candidato 24 — estruturação operacional por 5W2H
+
+**Formalizado em `models/action/action-plan-5w2h.md`.**
+
+O C24 transforma uma ação identificada em um plano operacional estruturado por What, Why, Where, When, Who, How e How Much.
+
+Ele é distinto de:
+- **C16:** sugestão, avaliação e priorização de ações;
+- **C17:** decomposição hierárquica de ações;
+- **C15A:** solicitação de informação adicional quando o contexto é insuficiente.
+
+A Aula 4.3 também apresenta a combinação de e-mail do gestor e tabela do produto. Essa **integração de múltiplas fontes** permanece em observação como possível mecanismo de fusão de contexto, distinto do C15A e potencialmente relacionado ao C20.
+
 ## Checkpoint de observações
 
 ### Ainda em observação
