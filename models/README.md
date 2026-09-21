@@ -65,16 +65,16 @@ São mecanismos que podem atravessar várias trilhas funcionais e, portanto, nã
    - `models/investigation/`.
    - Candidato 21 — investigação em dois níveis: visão macro → seleção do foco → análise aprofundada.
 
-5. **Refinamento iterativo — modelo transversal**
-   - família de mecanismos para refinar estados, regras, artefatos ou análises mediante feedback/nova informação, preservando continuidade entre estados;
-   - formalizado em models/iterative-refinement.md;
-   - quatro subfamílias: iteração algorítmica interna, iteração de análise/engenharia de regras, iteração de construção de artefato e iteração decisória/analítica.
-
 4. **Interaction — Interação / Human-in-the-loop**
    - mecanismos de interação em que o usuário fornece informação, direção ou decisão necessária para a continuidade da operação;
    - `models/interaction/`.
    - Candidato 15A — solicitação de informação adicional;
    - Candidato 22 — escolha direcional do foco pelo usuário.
+
+5. **Refinamento iterativo — modelo transversal**
+   - família de mecanismos para refinar estados, regras, artefatos ou análises mediante feedback/nova informação, preservando continuidade entre estados;
+   - formalizado em models/iterative-refinement.md;
+   - quatro subfamílias: iteração algorítmica interna, iteração de análise/engenharia de regras, iteração de construção de artefato e iteração decisória/analítica.
 - observação latente — detecção de confirmação humana ambígua antes de prosseguir, ainda sem candidato formal.
 
 A separação entre trilhas e áreas transversais evita transformar técnicas reutilizáveis em domínios artificiais e permite que um mesmo componente seja composto com diferentes trilhas.
