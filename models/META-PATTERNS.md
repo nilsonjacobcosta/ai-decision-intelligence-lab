@@ -543,3 +543,147 @@ Uma segunda ocorrência **forte e estruturalmente independente**, especialmente 
 Essa avaliação deverá considerar se existe mecanismo reutilizável suficientemente independente de Prompt Engineering genérico e se a função aparece em múltiplos contextos do laboratório.
 
 Até lá, ELI5 permanece como **primeira instância de uma categoria latente**, e não como candidato formal, modelo ou nova área transversal.
+
+
+## 10. What-if / Cenários / Simulação — linhagem amadurecendo
+
+**Status:** **hipótese fortalecida em observação — histórico unificado.**
+
+A expressão “análise estruturada de decisão por cenários e riscos”, observada na Aula 6.1, **não é registrada como um novo candidato independente**. Ela é tratada como amadurecimento da mesma linhagem de **what-if / cenários / simulação** observada anteriormente, inclusive na Aula 3.2.
+
+### Evolução da evidência
+
+**Observação inicial — Aula 3.2**
+
+A exploração de what-if, cenários e simulação foi observada como forma de explorar possibilidades alternativas diante de uma decisão. Na avaliação da época, a estrutura não era suficiente para formalização independente.
+
+**Nova evidência — Aula 6.1**
+
+O Prompt 2 acrescenta uma estrutura operacional mais definida:
+
+```text
+decisão central
+      ↓
+circunstâncias / fatores internos / pressões externas
+      ↓
+três cenários possíveis
+      ↓
+risco + impacto
+      ↓
+vantagens + desvantagens
+      ↓
+estratégias de mitigação
+```
+
+A nova ocorrência aumenta a clareza do mecanismo, mas não demonstra, por si só, uma operação funcionalmente distinta. O núcleo continua sendo a **construção e exploração de cenários alternativos vinculados a uma decisão**.
+
+### Decisão de governança
+
+O histórico deve permanecer **unificado**, para evitar transformar o refinamento de uma mesma hipótese em múltiplos candidatos artificiais.
+
+A expressão “análise estruturada de decisão por cenários e riscos” será utilizada como descrição da **forma mais madura atualmente observada** da linhagem, e não como nome de um novo candidato.
+
+### Critérios para eventual formalização da linhagem
+
+A hipótese poderá cruzar o limiar quando houver evidência suficiente de um mecanismo reutilizável que inclua, de forma consistente, elementos como:
+
+1. geração sistemática de cenários alternativos;
+2. variáveis ou critérios explícitos de diferenciação entre cenários;
+3. avaliação estruturada de risco/impacto;
+4. comparação ou exploração das consequências de cada cenário;
+5. atualização dos cenários diante de novas informações;
+6. possível ligação sistemática com decisão, ação ou monitoramento.
+
+Até lá, a Aula 6.1 deve ser registrada como **reforço estrutural da linhagem**, não como candidato adicional.
+
+---
+
+## 11. Candidato 3 como caso de fronteira — seleção contextual do método
+
+**Decisão:** **C3 não conta como ocorrência do meta-padrão “Escolha de método conforme características do problema”.**
+
+C3 apresenta uma analogia estrutural clara:
+
+```text
+características do contexto
+        ↓
+escolha de uma forma apropriada de operação
+```
+
+Entretanto, o laboratório distingue dois níveis funcionais.
+
+### Meta-padrão existente — escolha de método/técnica
+
+O padrão registrado nas ocorrências de C13 e C25 trata da seleção de um **método ou técnica analítica** em função das características do problema:
+
+```text
+problema
+   ↓
+características relevantes
+   ↓
+método / framework analítico
+   ↓
+aplicação
+   ↓
+resultado
+```
+
+### C3 — escolha do papel/modo de participação da IA
+
+C3 seleciona **como a IA participa do processo decisório**, considerando o tipo de decisão e o contexto disponível:
+
+```text
+tipo / contexto da decisão
+   ↓
+modo de participação da IA
+   ↓
+forma de apoio / interação
+   ↓
+decisão humana
+```
+
+A diferença é suficiente para impedir a contagem automática como ocorrência plena. Fundir os dois agora ampliaria retrospectivamente o conceito de “método” e perderia precisão taxonômica.
+
+### Justificativa de fronteira
+
+A semelhança formal é reconhecida, mas a contagem de uma ocorrência exige equivalência suficiente do **mecanismo e do nível funcional**. Neste caso:
+
+- **C13/C25:** escolha de técnica ou estratégia para executar uma operação;
+- **C3:** escolha do papel/modo de participação da IA no processo.
+
+Portanto, C3 é registrado como **caso de fronteira relacionado**, mas **não aumenta o número de ocorrências** do meta-padrão de seleção contextual do método.
+
+### Hipótese para reavaliação futura
+
+Se futuras evidências mostrarem que o padrão se amplia de “escolha de método” para um mecanismo mais geral de **seleção contextual do modo de operação**, C3 poderá ser reavaliado como evidência de uma família mais ampla.
+
+Essa ampliação **não é adotada agora**. O registro atual preserva a definição mais precisa do meta-padrão e evita inflá-lo retrospectivamente.
+
+## 12. Hipótese de evolução arquitetural do C3 — roteamento entre trilhas
+
+**Status:** hipótese em observação — **não decidida**.
+
+O C3 foi formalizado inicialmente como modelo da trilha **Decision**, porque sua evidência atual demonstra a escolha do papel/modo de participação da IA dentro do processo decisório.
+
+Existe, porém, uma possibilidade arquitetural futura: o mesmo mecanismo pode evoluir para um **roteador entre trilhas funcionais**, escolhendo não apenas como a IA participa, mas qual trilha deve ser acionada em função das características do problema.
+
+Hipótese:
+
+```text
+características do problema
+        ↓
+roteamento contextual
+        ├── Decision / racional
+        ├── Prediction
+        ├── julgamento intuitivo
+        └── colaboração / outras trilhas
+```
+
+Esta hipótese não deve ser confundida com a formalização atual de C3. Para promovê-la futuramente, será necessário observar evidência de:
+
+1. seleção sistemática entre trilhas distintas;
+2. critérios explícitos ou identificáveis para o roteamento;
+3. recorrência em mais de um contexto funcional;
+4. ganho arquitetural que justifique um mecanismo transversal próprio.
+
+Até nova evidência, **C3 permanece um modelo local de Decision**, enquanto a possibilidade de atuar como mecanismo de roteamento fica apenas registrada como hipótese de evolução.
