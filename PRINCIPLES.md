@@ -63,22 +63,11 @@ Esse princípio é especialmente materializado pelo C12, mas também aparece nos
 
 ## 5. Seleção contextual do método
 
-O laboratório não assume uma técnica universalmente adequada. A escolha do método deve considerar as características do problema, os dados/contexto disponíveis e o objetivo da operação.
+**Status:** ainda não formalizado como princípio arquitetural.
 
-```text
-problema + dados/contexto + objetivo
-            ↓
-     escolha do método
-            ↓
-          aplicação
-```
+O padrão está em **META-PATTERNS.md**, que é a fonte de verdade para suas ocorrências, peso de evidência, critérios de maturação e eventual promoção.
 
-Este princípio foi promovido após três ocorrências independentes:
-- C13 — seleção da técnica de previsão conforme o contexto;
-- seleção contextual de frameworks em Diagnosis/Action;
-- C25 — escolha entre estratégias de segmentação e clustering.
-
-A escolha concreta continua dependente do contexto e deve ser justificada quando relevante.
+Enquanto permanecer em observação, não deve ser tratado como princípio arquitetural vigente.
 
 ## 6. Não integração automática
 
