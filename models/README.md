@@ -70,6 +70,7 @@ São mecanismos que podem atravessar várias trilhas funcionais e, portanto, nã
    - `models/interaction/`.
    - Candidato 15A — solicitação de informação adicional;
    - Candidato 22 — escolha direcional do foco pelo usuário.
+- observação latente — detecção de confirmação humana ambígua antes de prosseguir, ainda sem candidato formal.
 
 A separação entre trilhas e áreas transversais evita transformar técnicas reutilizáveis em domínios artificiais e permite que um mesmo componente seja composto com diferentes trilhas.
 
@@ -111,7 +112,7 @@ A Aula 6.1 forneceu evidência operacional adicional, especialmente ao aplicar i
 
 C3 é distinto do meta-padrão **Escolha de método conforme características do problema**: o meta-padrão seleciona técnica/framework analítico; C3 seleciona o papel/modo de participação da IA. Por isso, C3 não é contado como ocorrência desse meta-padrão.
 
-Uma hipótese futura acompanha o C3: ele poderá eventualmente funcionar como mecanismo de roteamento entre trilhas do laboratório. Essa hipótese ainda não está decidida.
+A hipótese de C3 como mecanismo de roteamento entre trilhas permanece em observação. A Aula 6.3 reforça as condições 1 e 2 — transição entre modos decisórios distintos e critérios/contexto identificáveis para a transição — mas não avança a condição 3, porque a transição observada permanece dentro da trilha Decision e não atravessa trilhas funcionais diferentes.
 
 ## Diagnosis → Action
 
@@ -175,6 +176,17 @@ C22  → falta uma escolha direcional
 ```
 
 Eles podem ser usados em conjunto e atravessar diferentes trilhas.
+
+### Observação latente — confirmação humana ambígua
+
+A Aula 6.3 apresenta um caso em que dois cenários obtêm a mesma pontuação e o usuário responde “Confirmo a decisão 100%”, sem especificar qual cenário está confirmando. A IA prossegue sem detectar a ambiguidade; somente depois o usuário esclarece que o cenário escolhido é o 2.
+
+Esse mecanismo é distinto de:
+- **C15A:** falta informação necessária;
+- **C22:** falta uma escolha direcional;
+- **observação latente:** existe uma tentativa de confirmação, mas ela é semanticamente ambígua ou insuficientemente determinada.
+
+O padrão fica em observação, sem candidato formal. Se reaparecer com mecanismo explícito de detecção, interrupção, solicitação de esclarecimento e retomada após confirmação inequívoca, avaliar candidato próprio dentro de `models/interaction/`.
 
 ## Classification
 
