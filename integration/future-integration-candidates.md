@@ -5,56 +5,75 @@
 
 ## Critério da curadoria
 
-A lista reúne modelos que, ao final deste ciclo, apresentam combinação particularmente consistente de:
+A lista foi construída a partir dos documentos formais revisados no fechamento, considerando:
 
 - formalização explícita no laboratório;
 - mecanismo reutilizável claramente delimitado;
-- referências ou composição explícita com outros candidatos/modelos;
-- presença em mais de uma relação arquitetural, quando demonstrada;
+- referências cruzadas explícitas entre candidatos/modelos;
+- composição arquitetural demonstrada;
 - capacidade de funcionar como componente de outros fluxos sem depender de um contexto único.
 
-A densidade de referências cruzadas é tratada como **evidência de reutilização potencial**, não como ranking ou prova de superioridade.
+A densidade de referências cruzadas é tratada como **evidência de reutilização potencial**, não como ranking ou prova de superioridade. Quando um modelo é importante por suas relações de saída, mas recebe poucas referências, isso é indicado explicitamente.
 
 ## Núcleo curado
 
 ### C16 — Orquestração e priorização de ações
-É um dos componentes com maior rede de composição explícita: C3 o utiliza na transição do modo racional para o intuitivo; C26 é delimitado em relação a ele; C16 também se articula com C24 e C17, enquanto a documentação do refinamento iterativo o preserva como mecanismo distinto que pode ser composto. O modelo ainda possui três variantes de critérios já demonstradas: GUT, Esforço × Impacto e Impacto × Viabilidade.
 
-### C3 — Papel da IA conforme o tipo de decisão
-O C3 apresenta forte potencial transversal porque articula explicitamente C15A, C21, C16, C24 e C12, além de possuir uma extensão de transição entre modos decisórios. A documentação do refinamento iterativo também o cita diretamente como mecanismo distinto que pode ser composto. A evidência de reutilização do C3 aparece mais pela **composição arquitetural explícita** do que por grande número de referências recebidas.
+É um dos componentes com maior rede de composição explícita nos documentos revisados. É referenciado diretamente por C3, C25, C26 e pelo modelo de refinamento iterativo como mecanismo distinto que pode ser composto. Também se articula com C24 e C17 em sua própria delimitação funcional. O modelo possui três variantes de critérios já demonstradas: GUT, Esforço × Impacto e Impacto × Viabilidade.
 
 ### C12 — Validação crítica da saída do Forecast
-O C12 é reutilizado explicitamente pelo C3 para delimitar a diferença entre mudança de modo decisório e validação da saída analítica, e pelo C23 para distinguir validação reativa de calibração proativa. No próprio pipeline de previsão, também se relaciona ao C10 e ao C8. Isso lhe dá uma posição clara como componente de controle/validação posterior à geração do forecast.
+
+Recebe referências explícitas de C3 e C23, que o utilizam para delimitar validação crítica reativa em relação a mudança de modo decisório e calibração proativa. No próprio pipeline de previsão, relaciona-se a C10 e C8. Isso lhe dá uma função clara de controle posterior à geração do forecast.
 
 ### C23 — Calibração de classificação por regras explícitas
-O C23 é diretamente relacionado ao C9 e ao C12, e também fornece uma das quatro manifestações do modelo transversal de refinamento iterativo. Além disso, C25 o utiliza como contraponto para separar classificação de segmentação. A combinação de referências cruzadas e recorrência em um meta-padrão torna o mecanismo particularmente reutilizável.
+
+Recebe referências explícitas de C25 e do modelo de refinamento iterativo. Em sua própria definição, mantém relações funcionais com C9 e C12. Assim, participa de dois eixos de reutilização: calibração proativa de classificação e refinamento iterativo de regras/referências.
+
+### C21 — Investigação em dois níveis
+
+Recebe referências explícitas de C3, C22 e C25. O C21 fornece uma estrutura de investigação transversal — visão geral → seleção do foco → aprofundamento — que pode ser combinada com interação humana e segmentação sem absorver essas funções.
+
+### C24 — Estruturação operacional por 5W2H
+
+Recebe composição explícita de C3 e C16 e ocupa uma posição clara na passagem de uma ação selecionada para um plano operacional. Sua função é especializada, mas bem delimitada e complementar a outros mecanismos da trilha Action.
+
+### C3 — Papel da IA conforme o tipo de decisão
+
+O C3 apresenta forte potencial transversal porque referencia explicitamente C15A, C21, C16, C24 e C12, além de possuir uma extensão de transição entre modos decisórios. O modelo de refinamento iterativo também o cita como mecanismo distinto que pode ser composto. A ressalva é importante: nos documentos revisados, a reutilização do C3 aparece mais pela **composição arquitetural que ele habilita** do que por grande número de referências recebidas.
 
 ### C25 — Segmentação por padrões de comportamento
-O C25 se articula explicitamente com C23, C21 e C16 e fornece a evidência mais completa da subfamília de **iteração algorítmica interna** no modelo de refinamento iterativo, por meio do K-means e de sua estabilização. Também é uma das ocorrências fortes do meta-padrão de escolha de método conforme as características do problema.
+
+O C25 referencia explicitamente C23, C21 e C16 e fornece a evidência mais completa da subfamília de **iteração algorítmica interna** no modelo de refinamento iterativo, por meio do K-means e de sua estabilização. Também constitui uma das ocorrências fortes do meta-padrão de escolha de método conforme as características do problema. Sua rede de referências recebidas é menor, mas sua função de composição é ampla.
 
 ### C9 — Guardrails para Previsão
-O C9 mantém relação explícita com C23 por compartilhar o mecanismo transversal de restrições/regras proativas e com o C12 no ecossistema de validação de previsão. A documentação do laboratório também o utiliza como uma das ocorrências do padrão de calibração/restrição proativa. Sua rede de referências recebidas é menor que a de C16/C23, mas o mecanismo está bem delimitado e possui papel complementar claro no ciclo de previsão.
+
+Recebe referência explícita de C23 e ocupa uma posição clara como camada de restrição proativa do processo de previsão. Também aparece no meta-padrão de calibração/restrição proativa. A rede de referências recebidas é menor que a de C16, C21 ou C12; sua inclusão decorre da delimitação forte do mecanismo e da complementaridade com C12 no ciclo de previsão, e não de alta centralidade documental.
 
 ### Refinamento iterativo — modelo transversal
-O modelo transversal consolida evidências provenientes de C25, C23, enriquecimento de matriz de decisão e SWOT, e explicita uma abstração comum sem fundir mecanismos distintos. Ele também registra separadamente sua relação com C16 e C3. Sua força está menos em referências recebidas — por ser um modelo consolidado mais recentemente — e mais na quantidade e diversidade de mecanismos que consegue explicar sem apagar suas diferenças.
 
-## Candidatos próximos do núcleo
+Consolida evidências provenientes de C25, C23, enriquecimento de matriz de decisão e SWOT e estabelece uma abstração comum sem fundir mecanismos distintos. Também registra explicitamente sua relação com C16 e C3. Por ser um modelo formalizado mais recentemente, ainda recebe poucas referências diretas de outros documentos; sua força está na **diversidade de mecanismos que consegue explicar e preservar em uma mesma família**, não na centralidade de referências recebidas.
 
-Alguns modelos apresentam composição relevante, mas a rede de referências cruzadas observada neste ciclo ainda é menor ou mais localizada. Eles permanecem formalizados e podem entrar em uma futura avaliação, sem necessidade de incluí-los nesta curadoria nuclear.
+## Como ler a curadoria
 
-- **C21 — Investigação em dois níveis:** articula-se com C22 e C25 e serve como estrutura transversal de investigação, mas sua rede de composição ainda é mais concentrada.
-- **C24 — Estruturação operacional por 5W2H:** recebe composição explícita de C3 e C16 e ocupa uma posição clara na passagem de ação para execução, mas permanece mais especializado na operacionalização.
-- **C26 — Mapeamento de oportunidades:** possui delimitação arquitetural explícita em relação a C16 e fluxo opcional C26 → C16 → C24; sua formalização é recente, portanto a rede de referências ainda é menor.
+A lista não representa uma ordem de prioridade. Ela identifica um **núcleo de componentes com sinais claros de reutilização, composição ou centralidade estrutural** no estado atual do laboratório.
 
-## Leitura correta da lista
+Os exemplos sugeridos no fechamento — C9, C12, C16, C23, C3 e o modelo de refinamento iterativo — foram, portanto, **confirmados com ressalvas diferentes**:
+
+- C16 e C12 apresentam rede explícita de referências recebidas;
+- C23 e C21 também possuem múltiplas referências recebidas;
+- C3 e C25 são mais fortes pela composição que habilitam;
+- C9 possui rede de referências menor, mas mecanismo bem delimitado;
+- refinamento iterativo é transversal e consolidante, ainda com pouca referência recebida por sua formalização recente.
+
+## Próximos candidatos, fora do núcleo
+
+- **C26 — Mapeamento de oportunidades:** possui delimitação arquitetural explícita em relação a C16 e fluxo opcional C26 → C16 → C24, mas sua formalização é recente e a rede de referências ainda é menor.
+- Outros modelos formalizados permanecem disponíveis para futura avaliação; não foram elevados ao núcleo apenas porque a rede de composição cruzada observada neste fechamento ainda é mais localizada.
+
+## Limite arquitetural
 
 Esta curadoria **não é uma seleção para integração**. Ela apenas registra quais componentes chegam ao fechamento do ciclo com sinais particularmente claros de reutilização e composição.
 
-A próxima decisão, em momento separado, poderá avaliar:
-
-1. quais desses componentes merecem teste de integração;
-2. em que contexto do ORCHESTRATOR CORE;
-3. com quais interfaces e limites;
-4. quais evidências adicionais ainda seriam necessárias.
+Uma futura frente, aberta separadamente, poderá avaliar contexto, interfaces, testes e limites de eventual integração com o ORCHESTRATOR CORE.
 
 Até que essa frente seja aberta explicitamente, o laboratório e o ORCHESTRATOR CORE permanecem separados.
