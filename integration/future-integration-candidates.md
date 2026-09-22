@@ -15,6 +15,21 @@ A lista foi construída a partir dos documentos formais revisados no fechamento,
 
 A densidade de referências cruzadas é tratada como **evidência de reutilização potencial**, não como ranking ou prova de superioridade. Quando um modelo é importante por suas relações de saída, mas recebe poucas referências, isso é indicado explicitamente.
 
+### Duas dimensões que não devem ser confundidas
+
+A análise de referências recebidas possui um **viés temporal estrutural**: candidatos formalizados mais cedo no curso tiveram mais aulas subsequentes nas quais poderiam ser citados. Portanto, maior número de referências recebidas pode refletir simplesmente **maior tempo de exposição**, e não maior solidez, centralidade ou potencial de integração.
+
+Por isso, esta curadoria separa duas dimensões:
+
+1. **Maturidade por evidência acumulada** — quantidade e diversidade de evidências já observadas, incluindo referências cruzadas documentadas, recorrência, variações de aplicação e explicitação de limites.
+2. **Centralidade estrutural na arquitetura** — papel que o componente desempenha na organização dos fluxos e na relação entre outros mecanismos, independentemente de quantas referências ele já acumulou.
+
+Essas dimensões são complementares, mas não equivalentes. Um candidato recente pode ter **alta centralidade estrutural e baixa maturidade por evidência acumulada** simplesmente por ter tido menos tempo de exposição no curso.
+
+Essa distinção é especialmente relevante para **C3, C25 e o modelo de refinamento iterativo**. O checkpoint mestre já registra aspectos estruturais desses componentes que não devem ser penalizados pelo viés temporal: C3 como mecanismo de transição entre modos decisórios, incluindo a passagem Decision → intuição/heurística; C25 como origem de uma ocorrência forte do meta-padrão de seleção contextual do método; e o refinamento iterativo como modelo transversal que consolida mecanismos de diferentes famílias. A menor quantidade de referências recebidas desses componentes não deve ser interpretada isoladamente como menor solidez arquitetural.
+
+Em uma futura avaliação de integração, **referências recebidas devem ser tratadas como um indicador temporalmente condicionado, nunca como proxy único de qualidade ou centralidade**.
+
 ## Núcleo curado
 
 ### C16 — Orquestração e priorização de ações
