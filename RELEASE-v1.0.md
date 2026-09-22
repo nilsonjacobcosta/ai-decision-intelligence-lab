@@ -32,6 +32,6 @@ A lista curada em `integration/future-integration-candidates.md` registra apenas
 
 ## Marco do ciclo
 
-O estado do laboratório no fechamento é representado pelo commit que contém este registro e as entregas associadas. A criação de uma referência GitHub do tipo **tag/release `v1.0`** depende de uma operação de criação de tag que não está disponível na interface GitHub conectada a esta sessão; por isso, este arquivo não deve ser interpretado como uma tag Git.
+O estado do laboratório no fechamento é representado pelo commit final que contém este registro e as entregas associadas. A criação de uma referência GitHub do tipo **tag/release `v1.0`** depende de uma operação de criação de tag que não está disponível na interface GitHub conectada a esta sessão; por isso, este arquivo não deve ser interpretado como uma tag Git.
 
 Para evitar qualquer ambiguidade de versionamento, o commit de fechamento deve ser o ponto de referência para a futura criação manual/externa da tag `v1.0`.
