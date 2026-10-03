@@ -42,6 +42,19 @@ Também fazem parte do escopo mecanismos que atravessam mais de uma trilha:
 
 Engenharia de prompt e outras técnicas instrumentais podem ser registradas quando constituírem mecanismos reutilizáveis, mas não ampliam, por si só, o escopo funcional do laboratório.
 
+### Regra de instrumentalidade de ferramentas de IA
+
+Uma ferramenta de IA utilizada dentro de uma das funções já reconhecidas do processo — **descoberta, captura, documentação ou persistência do conhecimento** — deve ser tratada, por padrão, como **instrumento da função em que está sendo aplicada**, e não como candidato independente de Engenharia de Prompt.
+
+A ferramenta só deve ser considerada candidata em **Prompt Engineering** quando a **técnica de prompt em si** constituir um mecanismo novo, reutilizável e independente da ferramenta específica utilizada para demonstrá-la.
+
+Assim:
+
+- ferramenta específica usada para executar uma função → **instrumento da função**;
+- técnica de prompt abstraível, reutilizável e independente da ferramenta → **possível mecanismo de Prompt Engineering**.
+
+Essa regra evita transformar cada nova ferramenta apresentada no curso em candidato arquitetural apenas por incorporar IA ao processo.
+
 ## O que está fora do escopo
 
 Não constituem, por si só, candidatos do laboratório:
