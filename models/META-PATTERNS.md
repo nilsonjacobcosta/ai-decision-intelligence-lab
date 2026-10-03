@@ -954,3 +954,66 @@ Se o padrão reaparecer em outros contextos com estrutura operacional suficiente
 5. retomada da operação somente após confirmação suficientemente determinada.
 
 Até nova evidência, **não contar ocorrência, não criar candidato e não alterar a arquitetura**. O registro permanece como observação latente para acompanhamento.
+
+---
+
+## 18. Q1 — Knowledge Base / Memory: três dimensões em observação
+
+**Status:** **pergunta arquitetural aberta — não formalizar candidato neste estágio.**
+
+A evidência acumulada no curso de Gestão de Conhecimento exige separar explicitamente três funções relacionadas, mas não equivalentes. Elas devem ser acompanhadas separadamente para evitar que persistência, gestão ativa de cobertura e relações entre conhecimentos sejam tratadas como uma única capacidade indiferenciada.
+
+### B1 — Persistência e recuperação
+
+**Pergunta:** existe uma capacidade transversal de manter conhecimento disponível e recuperá-lo posteriormente?
+
+O mecanismo observado inclui:
+
+conhecimento capturado/documentado → armazenamento persistente → acesso posterior → recuperação / reutilização
+
+A evidência do curso já inclui gravações e documentos que permanecem acessíveis, além da transformação de conversas dispersas em artefatos consultáveis posteriormente.
+
+**Estado:** evidência acumulada; ainda não suficiente para concluir que B1 constitua uma área transversal independente.
+
+### B2 — Gestão ativa de cobertura/lacunas
+
+**Pergunta:** além de armazenar conhecimento, existe um mecanismo próprio para analisar a cobertura da base, identificar déficits e deliberadamente ampliar o conteúdo disponível?
+
+A evidência anterior do curso descreve uma base de conhecimento cuja cobertura pode ser analisada e, quando uma área está em déficit, pode receber novos documentos para recompor/ampliar o conhecimento disponível.
+
+Isso é estruturalmente diferente de simples persistência:
+
+base existente → análise de cobertura / lacuna → identificação de déficit → adição deliberada de conhecimento
+
+**Estado:** evidência observada, ainda sem formalização.
+
+### B3 — Relações entre unidades de conhecimento
+
+**Pergunta:** existe uma capacidade transversal específica para **mapear, explicitar e explorar as relações entre unidades de conhecimento já persistidas**?
+
+A evidência atual vem da organização no Obsidian, em que uma conversa capturada/documentada é ligada por referências a outros documentos, como documentação sobre inovação, tarefas e processos relacionados, permitindo visualizar essas conexões em um grafo.
+
+O mecanismo potencial é:
+
+unidades de conhecimento persistidas → relações explícitas entre unidades → estrutura relacional / grafo → navegação e contextualização do conhecimento
+
+B3 **não é simplesmente B1**: B1 pergunta se o conhecimento permanece disponível; B3 pergunta como unidades persistidas se conectam entre si.
+
+B3 também **não é B2**: B2 trata da cobertura e das lacunas da base; B3 trata da topologia/estrutura relacional entre conteúdos existentes.
+
+**Estado:** **hipótese arquitetural em observação**. A evidência atual demonstra relações entre documentos como funcionalidade de organização do conhecimento, mas ainda não demonstra que exista um mecanismo transversal suficientemente independente para justificar uma nova área do laboratório.
+
+### Regra de acompanhamento
+
+B1, B2 e B3 devem ser avaliados separadamente nas próximas ocorrências. Uma ocorrência que demonstre apenas armazenamento não deve ser contada como evidência de B3; uma ocorrência de identificação de lacunas não deve ser contada como B1 ou B3; e uma relação entre documentos não deve ser tratada automaticamente como evidência de gestão ativa de cobertura.
+
+A eventual formalização de qualquer uma das três dimensões exigirá evidência de:
+
+1. mecanismo operacional identificável;
+2. independência funcional suficiente em relação às capacidades já existentes;
+3. reutilização fora do contexto da ferramenta ou caso original;
+4. recorrência ou variação suficiente para testar a hipótese;
+5. ganho arquitetural claro que justifique uma capacidade transversal própria.
+
+Até que esses critérios sejam satisfeitos, **Q1 permanece uma pergunta arquitetural em aberto e não gera criação automática de modelo ou pasta**.
+
