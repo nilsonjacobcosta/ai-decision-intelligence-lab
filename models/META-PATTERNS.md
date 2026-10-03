@@ -1017,3 +1017,43 @@ A eventual formalização de qualquer uma das três dimensões exigirá evidênc
 
 Até que esses critérios sejam satisfeitos, **Q1 permanece uma pergunta arquitetural em aberto e não gera criação automática de modelo ou pasta**.
 
+---
+
+## 19. Checkpoint — Gestão de Conhecimento com IA
+
+**Status geral:** **curso encerrado; hipóteses abertas preservadas em observação ativa.**
+
+Este checkpoint evita que as hipóteses arquiteturais levantadas durante o curso se percam após o encerramento da fonte.
+
+### Hipóteses em observação ativa
+
+| Hipótese | Estado no encerramento | Próximo passo |
+|---|---|---|
+| **B1 — Persistência, recuperação e reutilização** | 🟢 mecanismo maduro; 🟡 transversalidade em teste; 🔴 sem evidência intertrilha | Aguardar próxima fonte compatível que permita testar composição real com outra trilha funcional |
+| **B2 — Gestão ativa de cobertura/lacunas** | 🟡 observação | Aguardar nova fonte com mecanismo explícito de análise de cobertura, identificação de lacunas e ampliação deliberada da base |
+| **B3 — Relações entre unidades de conhecimento** | 🟡 observação | Aguardar nova fonte que demonstre mecanismo próprio de explicitação, navegação ou exploração das relações entre unidades persistidas |
+| **Q2 — Discovery/Elicitation × Investigation** | 🟡 pergunta arquitetural aberta | Aguardar nova fonte com evidência discriminante sobre elicitação de conhecimento antes de objeto investigativo versus aprofundamento de investigação existente |
+| **Ba — espaço compartilhado de geração de conhecimento** | 🟡 observação | Aguardar nova fonte que demonstre mecanismo estrutural próprio e reutilizável, além das capacidades de Interaction já existentes |
+
+### Regra de continuidade
+
+Todas as cinco hipóteses acima devem ser tratadas como **observação ativa, aguardando próxima fonte compatível**.
+
+O encerramento do curso **não encerra nem promove** essas hipóteses. A próxima fonte compatível deve retomar o teste a partir do estado registrado aqui, preservando a proveniência das avaliações anteriores.
+
+Nenhuma hipótese deste checkpoint implica criação automática de modelo, pasta, trilha ou área transversal.
+
+### Nota sobre B1
+
+B1 terminou o curso com mecanismo suficientemente maduro para ser reconhecido como persistência + recuperação + reutilização, incluindo aplicação do conhecimento recuperado em uma atividade posterior. Porém, conforme a regra de governança sobre maturidade intradomínio versus centralidade intertrilha, a evidência permaneceu predominantemente intradomínio. O curso não forneceu evidência real de composição de B1 com uma trilha funcional do laboratório.
+
+### Nota sobre evidência
+
+O checkpoint preserva explicitamente três distinções metodológicas que foram reforçadas durante o curso:
+
+1. **ausência de evidência ≠ evidência positiva**;
+2. **replicação/semelhança ≠ nova ocorrência independente**;
+3. **maturidade intradomínio ≠ centralidade intertrilha**.
+
+Essas distinções não são resultados específicos do conteúdo de Gestão do Conhecimento; foram incorporadas à governança geral do laboratório/protocolo e devem orientar fontes futuras.
+
